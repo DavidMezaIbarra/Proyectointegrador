@@ -1,0 +1,72 @@
+.container {
+    overflow:hidden;
+    list-style:none;
+}
+
+.container li {
+    float:left;
+    text-align:justify;
+    width: 300px;
+    margin-left: 1rem;
+    margin-right: 1em;
+    margin-top: 1rem;
+}
+
+.container img {
+    display:block;
+}
+/*equis en esquina*/
+.wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.close {
+  content: url(../img/closered.png);
+  position: absolute;
+  background-color: white;
+  border-radius: 100px;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  opacity: 1;
+}
+.close:hover,.close:focus,.edit:hover, .edit:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    filter: alpha(opacity=0);
+    opacity: .7;
+}
+.edit {
+  content: url(../img/reload.png);
+  position: absolute;
+  background-color: white;
+  border-radius: 100px;
+  top: 0;
+  right: 0;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  opacity: 1;
+}
+
+.vertical-alignment-helper {
+    display:table;
+    height: 100%;
+    width: 100%;
+}
+.vertical-align-center {
+    /* To center vertically */
+    display: table-cell;
+    vertical-align: middle;
+}
+.modal-content {
+    /* Bootstrap sets the size of the modal in the modal-dialog class, we need to inherit it */
+    width:inherit;
+    height:inherit;
+    /* To center horizontally */
+    margin: 0 auto;
+}
