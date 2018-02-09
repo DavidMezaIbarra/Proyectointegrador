@@ -10,6 +10,7 @@
 	<title>Panel de Administración</title>
 </head>
 <body>
+	
 	<?php
 		include "./includes/navs.php";
 	?>
