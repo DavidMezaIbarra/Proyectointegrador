@@ -14,10 +14,10 @@
 	<script src="js/bootstrap.min.js"></script>
 	<div class="container col-md-12" style="background-color:#283447;">
 		<div class="container col-md-12" style="margin-top: 50px;background-color: white;height: auto;">
-			
-		<li>	
-		<div class="wrapper">		
-			<img src="./img/bg1.jpg" width="300px" height="300px"/>	    	
+
+		<li>
+		<div class="wrapper">
+			<img src="./img/bg1.jpg" width="300px" height="300px"/>
 			<span class="close" data-toggle="modal" data-target="#eliminar"></span>
 	    </div>
 	    <div class="wrapper">
@@ -25,9 +25,9 @@
 		    <p class="titulo">Esta es una noticia</p>
 		    <p class="parrafo">Aqui vemos que en rancho el milagro ayudamos a todo tipo de personasasdasdasdasdasfjahfkjadhd kjashfkjaasdas dasdasdadah</p>
 		</div>
-		</li><li>	
-		<div class="wrapper">		
-			<img src="./img/bg1.jpg" width="300px" height="300px"/>	    	
+		</li><li>
+		<div class="wrapper">
+			<img src="./img/bg1.jpg" width="300px" height="300px"/>
 			<span class="close" data-toggle="modal" data-target="#eliminar"></span>
 	    </div>
 	    <div class="wrapper">
@@ -85,7 +85,7 @@
     </div>
 </div>
 
-	<script>		
+	<script>
 		document.querySelector('.close').addEventListener('click', function() {
   			console.log('close');
 		});
