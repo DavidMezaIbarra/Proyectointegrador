@@ -11,7 +11,7 @@
 </head>
 <body>
 	<?php
-	include
+		include "./includes/navs.php";
 	?>
 	<div class="main">
 	<!-- Content Here -->
