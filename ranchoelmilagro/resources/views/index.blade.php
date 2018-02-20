@@ -2,11 +2,11 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/bootstrap.css" rel="stylesheet">
-	<link rel="stylesheet" href="./css/estilos.css">
-	<link rel="stylesheet" href="./css/animate.css">		
+		<link rel="stylesheet" href="./css/estilos.css">
+		<link rel="stylesheet" href="./css/animate.css">
 
 	<title>Proyecto Integrador</title>
 </head>
@@ -14,7 +14,7 @@
 	<header>
 		<div  class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
 		  <ul class="nav navbar-nav">
-		  	<li><img src="./img/logo.png" class="img-responsive" alt="Responsive image" style="margin-top: 2%;"></li>
+		  	<li><img src="{{asset('/img/logo.png')}}" class="img-responsive" alt="Responsive image" style="margin-top: 2%;"></li>
 		  	<li style="margin-left: -50px;"><a href="#s3" style="color: white;">Inicio</a></li>
 		  	<li><a href="#s2" style="color: white;">Nosotros</a></li>
 		  	<li><a href="#s6" style="color: white;">Noticias</a></li>
