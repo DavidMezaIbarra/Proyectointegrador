@@ -18,6 +18,7 @@
 		  	<li style="margin-left: -50px;"><a href="#s3" style="color: white;">Inicio</a></li>
 		  	<li><a href="#s2" style="color: white;">Nosotros</a></li>
 		  	<li><a href="#s6" style="color: white;">Noticias</a></li>
+				<li><a</li>
 		  </ul>
 		</div>
 	</header>
@@ -38,7 +39,7 @@
 						</div>
 
 						<div class="item responsive-slider image-3" style="height: 100vh;filter: brightness(65%);">
-							<img src="./img/slider3.jpg" alt="New York" style="height: 100%; width: 100%">
+							<img src="{{asset('./img/slider3.jpg')}}" alt="New York" style="height: 100%; width: 100%">
 						</div>
 					</div>
 					<a class="left carousel-control" href="#myCarousel" data-slide="prev">
@@ -90,121 +91,110 @@
 		<div><p class="titulo" style="text-align: center;font-size: 5rem;">Noticias</p></div>
 	    <li>
 		    <a class="lightbox" href="#1">
-		    	<img src="./img/bg1.jpg" width="300px" height="300px"/>
+		    	<img src="{{asset('./img/bg1.jpg')}}" width="300px" height="300px"/>
 		    </a>
 	    <div class="lightbox-target" id="1">
-			<img src="./img/bg1.jpg"/>
+			<img src="{{asset('./img/bg1.jpg')}}"/>
 			<a class="lightbox-close" href="#s6"></a>
 		</div>
 		    <p class="titulo">Esta es una noticia</p>
 		    <p class="parrafo">Aqui vemos que en rancho el milagro ayudamos a todo tipo de personasasdasdasdasdasfjahfkjadhd kjashfkjaasdas dasdasdadah</p>
 		</li> <li>
 		    <a class="lightbox" href="#2">
-		    	<img src="./img/not1.jpg" width="300px" height="300px"/>
+		    	<img src="{{asset('./img/not1.jpg')}}" width="300px" height="300px"/>
 		    </a>
 	    <div class="lightbox-target" id="2">
-			<img src="./img/not1.jpg"/>
+			<img src="{{asset('./img/not1.jpg')}}"/>
 			<a class="lightbox-close" href="#s6"></a>
 		</div>
 		    <p class="titulo">Esta es una noticia</p>
 		    <p class="parrafo">Aqui vemos que en rancho el milagro ayudamos a todo tipo de personasasdasdasdasdasfjahfkjadhd kjashfkjaasdas dasdasdadah</p>
 		</li> <li>
 		    <a class="lightbox" href="#1">
-		    	<img src="./img/not1.jpg" width="300px" height="300px"/>
+		    	<img src="{{asset('./img/not1.jpg')}}" width="300px" height="300px"/>
 		    </a>
 	    <div class="lightbox-target" id="1">
-			<img src="./img/not1.jpg"/>
+			<img src="{{asset('./img/not1.jpg')}}"/>
 			<a class="lightbox-close" href="#s6"></a>
 		</div>
 		    <p class="titulo">Esta es una noticia</p>
 		    <p class="parrafo">Aqui vemos que en rancho el milagro ayudamos a todo tipo de personasasdasdasdasdasfjahfkjadhd kjashfkjaasdas dasdasdadah</p>
 		</li> <li>
 		    <a class="lightbox" href="#1">
-		    	<img src="./img/not1.jpg" width="300px" height="300px"/>
+		    	<img src="{{asset('./img/not1.jpg')}}" width="300px" height="300px"/>
 		    </a>
 	    <div class="lightbox-target" id="1">
-			<img src="./img/not1.jpg"/>
+			<img src="{{asset('./img/not1.jpg')}}"/>
 			<a class="lightbox-close" href="#s6"></a>
 		</div>
 		    <p class="titulo">Esta es una noticia</p>
 		    <p class="parrafo">Aqui vemos que en rancho el milagro ayudamos a todo tipo de personasasdasdasdasdasfjahfkjadhd kjashfkjaasdas dasdasdadah</p>
 		</li> <li>
 		    <a class="lightbox" href="#1">
-		    	<img src="./img/not1.jpg" width="300px" height="300px"/>
+		    	<img src="{{asset('./img/not1.jpg')}}" width="300px" height="300px"/>
 		    </a>
 	    <div class="lightbox-target" id="1">
-			<img src="./img/not1.jpg"/>
+			<img src="{{asset('./img/not1.jpg')}}"/>
 			<a class="lightbox-close" href="#s6"></a>
 		</div>
 		    <p class="titulo">Esta es una noticia</p>
 		    <p class="parrafo">Aqui vemos que en rancho el milagro ayudamos a todo tipo de personasasdasdasdasdasfjahfkjadhd kjashfkjaasdas dasdasdadah</p>
 		</li><li>
 		    <a class="lightbox" href="#1">
-		    	<img src="./img/not1.jpg" width="300px" height="300px"/>
+		    	<img src="{{asset('./img/not1.jpg')}}" width="300px" height="300px"/>
 		    </a>
 	    <div class="lightbox-target" id="1">
-			<img src="./img/not1.jpg"/>
+			<img src="{{asset('/img/not1.jpg')}}"/>
 			<a class="lightbox-close" href="#s6"></a>
 		</div>
 		    <p class="titulo">Esta es una noticia</p>
 		    <p class="parrafo">Aqui vemos que en rancho el milagro ayudamos a todo tipo de personasasdasdasdasdasfjahfkjadhd kjashfkjaasdas dasdasdadah</p>
 		</li><li>
 		    <a class="lightbox" href="#1">
-		    	<img src="./img/not1.jpg" width="300px" height="300px"/>
+		    	<img src="{{asset('/img/not1.jpg')}}" width="300px" height="300px"/>
 		    </a>
 	    <div class="lightbox-target" id="1">
-			<img src="./img/not1.jpg"/>
+			<img src="{{asset('/img/not1.jpg')}}"/>
 			<a class="lightbox-close" href="#s6"></a>
 		</div>
 		    <p class="titulo">Esta es una noticia</p>
 		    <p class="parrafo">Aqui vemos que en rancho el milagro ayudamos a todo tipo de personasasdasdasdasdasfjahfkjadhd kjashfkjaasdas dasdasdadah</p>
 		</li><li>
 		    <a class="lightbox" href="#1">
-		    	<img src="./img/not1.jpg" width="300px" height="300px"/>
+		    	<img src="{{asset('/img/not1.jpg')}}" width="300px" height="300px"/>
 		    </a>
 	    <div class="lightbox-target" id="1">
-			<img src="./img/not1.jpg"/>
+			<img src="{{asset('/img/not1.jpg')}}"/>
 			<a class="lightbox-close" href="#s6"></a>
 		</div>
 		    <p class="titulo">Esta es una noticia</p>
 		    <p class="parrafo">Aqui vemos que en rancho el milagro ayudamos a todo tipo de personasasdasdasdasdasfjahfkjadhd kjashfkjaasdas dasdasdadah</p>
 		</li><li>
 		    <a class="lightbox" href="#1">
-		    	<img src="./img/not1.jpg" width="300px" height="300px"/>
+		    	<img src="{{asset('/img/not1.jpg')}}" width="300px" height="300px"/>
 		    </a>
 	    <div class="lightbox-target" id="1">
-			<img src="./img/not1.jpg"/>
+			<img src="{{asset('/img/not1.jpg')}}"/>
 			<a class="lightbox-close" href="#s6"></a>
 		</div>
 		    <p class="titulo">Esta es una noticia</p>
 		    <p class="parrafo">Aqui vemos que en rancho el milagro ayudamos a todo tipo de personasasdasdasdasdasfjahfkjadhd kjashfkjaasdas dasdasdadah</p>
 		</li><li>
 		    <a class="lightbox" href="#1">
-		    	<img src="./img/not1.jpg" width="300px" height="300px"/>
+		    	<img src="{{asset('/img/not1.jpg')}}" width="300px" height="300px"/>
 		    </a>
 	    <div class="lightbox-target" id="1">
-			<img src="./img/not1.jpg"/>
+			<img src="{{asset('/img/not1.jpg')}}"/>
 			<a class="lightbox-close" href="#s6"></a>
 		</div>
 		    <p class="titulo">Esta es una noticia</p>
 		    <p class="parrafo">Aqui vemos que en rancho el milagro ayudamos a todo tipo de personasasdasdasdasdasfjahfkjadhd kjashfkjaasdas dasdasdadah</p>
 		</li><li>
 		    <a class="lightbox" href="#1">
-		    	<img src="./img/not1.jpg" width="300px" height="300px"/>
+		    	<img src="{{asset('/img/not1.jpg')}}" width="300px" height="300px"/>
 		    </a>
 	    <div class="lightbox-target" id="1">
-			<img src="./img/not1.jpg"/>
-			<a class="lightbox-close" href="#s6"></a>
-		</div>
-		    <p class="titulo">Esta es una noticia</p>
-		    <p class="parrafo">Aqui vemos que en rancho el milagro ayudamos a todo tipo de personasasdasdasdasdasfjahfkjadhd kjashfkjaasdas dasdasdadah</p>
-		</li>
-		<li>
-		    <a class="lightbox" href="#1">
-		    	<img src="./img/not1.jpg" width="300px" height="300px"/>
-		    </a>
-	    <div class="lightbox-target" id="1">
-			<img src="./img/not1.jpg"/>
+			<img src="{{asset('/img/not1.jpg')}}"/>
 			<a class="lightbox-close" href="#s6"></a>
 		</div>
 		    <p class="titulo">Esta es una noticia</p>
