@@ -10,10 +10,7 @@
 	<title>Panel de Administración</title>
 </head>
 <body>
-	
-	<?php
-		include "./includes/navs.php";
-	?>
+	@extends('/includes/navs')
 	<div class="main">
 	<!-- Content Here -->
 	<section id="s6" style="height: auto;">
@@ -144,6 +141,6 @@
 	</section>
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script type="text/javascript" src="./js/adminpanel.js"></script>
+	<script type="text/javascript" src="../../public/js/adminpanel.js"></script>
 </body>
 </html>
