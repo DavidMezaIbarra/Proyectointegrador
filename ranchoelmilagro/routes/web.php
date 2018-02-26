@@ -16,4 +16,5 @@ Route::get('/', function () {
 
 });
 Route::get('/index','indexController@index');
-Route::get('/panel','panelController@panelweb');
+Route::get('/panelapp','panelController@panelweb');
+Route::get('/login','loginController@login');
