@@ -13,7 +13,7 @@
 	<div class="container col-md-12" style="margin-top: 50px;background-color: white;height: auto;">
 		<li>
 			<div class="wrapper">
-				<img src="./img/bg1.jpg" width="300px" height="300px"/>
+				<img src="{{asset('/img/bg1.jpg')}}" width="300px" height="300px"/>
 				<span class="close" data-toggle="modal" data-target="#eliminar"></span>
 		  </div>
 		  <div class="wrapper">
