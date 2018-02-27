@@ -16,126 +16,45 @@
 	<section id="s6" style="height: auto;">
 		<ul class="container">
 			<div><p class="titulo" style="text-align: center;font-size: 5rem;">Noticias</p></div>
-		    <li>
-			    <a class="lightbox" href="#1">
-			    	<img src="./img/bg1.jpg" width="300px" height="300px"/>
-			    </a>
-		    <div class="lightbox-target" id="1">
-				<img src="./img/bg1.jpg"/>
-				<a class="lightbox-close" href="#s6"></a>
-			</div>
-			    <p class="titulo">Esta es una noticia</p>
-			    <p class="parrafo">Aqui vemos que en rancho el milagro ayudamos a todo tipo de personasasdasdasdasdasfjahfkjadhd kjashfkjaasdas dasdasdadah</p>
-			</li> <li>
-			    <a class="lightbox" href="#2">
-			    	<img src="./img/not1.jpg" width="300px" height="300px"/>
-			    </a>
-		    <div class="lightbox-target" id="2">
-				<img src="./img/not1.jpg"/>
-				<a class="lightbox-close" href="#s6"></a>
-			</div>
-			    <p class="titulo">Esta es una noticia</p>
-			    <p class="parrafo">Aqui vemos que en rancho el milagro ayudamos a todo tipo de personasasdasdasdasdasfjahfkjadhd kjashfkjaasdas dasdasdadah</p>
-			</li> <li>
+			<li>
+					<a class="lightbox" href="#1">
+						<img src="./img/not1.jpg" width="300px" height="300px"/>
+					</a>
+					<div class="lightbox-target" id="1">
+						<img src="./img/not1.jpg"/>
+						<a class="lightbox-close" href="#s6"></a>
+					</div>
+					<p class="titulo">Esta es una noticia</p>
+					<p class="parrafo">Aqui vemos que en rancho el milagro ayudamos a todo tipo de personasasdasdasdasdasfjahfkjadhd kjashfkjaasdas dasdasdadah</p>
+			</li>
+			<li>
 			    <a class="lightbox" href="#1">
 			    	<img src="./img/not1.jpg" width="300px" height="300px"/>
 			    </a>
-		    <div class="lightbox-target" id="1">
-				<img src="./img/not1.jpg"/>
-				<a class="lightbox-close" href="#s6"></a>
-			</div>
+			    <div class="lightbox-target" id="1">
+						<img src="./img/not1.jpg"/>
+						<a class="lightbox-close" href="#s6"></a>
+					</div>
 			    <p class="titulo">Esta es una noticia</p>
 			    <p class="parrafo">Aqui vemos que en rancho el milagro ayudamos a todo tipo de personasasdasdasdasdasfjahfkjadhd kjashfkjaasdas dasdasdadah</p>
-			</li> <li>
+			</li>
+			<li>
 			    <a class="lightbox" href="#1">
 			    	<img src="./img/not1.jpg" width="300px" height="300px"/>
 			    </a>
-		    <div class="lightbox-target" id="1">
-				<img src="./img/not1.jpg"/>
-				<a class="lightbox-close" href="#s6"></a>
-			</div>
+			    <div class="lightbox-target" id="1">
+						<img src="./img/not1.jpg"/>
+						<a class="lightbox-close" href="#s6"></a>
+					</div>
 			    <p class="titulo">Esta es una noticia</p>
 			    <p class="parrafo">Aqui vemos que en rancho el milagro ayudamos a todo tipo de personasasdasdasdasdasfjahfkjadhd kjashfkjaasdas dasdasdadah</p>
-			</li> <li>
-			    <a class="lightbox" href="#1">
-			    	<img src="./img/not1.jpg" width="300px" height="300px"/>
-			    </a>
-		    <div class="lightbox-target" id="1">
-				<img src="./img/not1.jpg"/>
-				<a class="lightbox-close" href="#s6"></a>
-			</div>
-			    <p class="titulo">Esta es una noticia</p>
-			    <p class="parrafo">Aqui vemos que en rancho el milagro ayudamos a todo tipo de personasasdasdasdasdasfjahfkjadhd kjashfkjaasdas dasdasdadah</p>
-			</li><li>
-			    <a class="lightbox" href="#1">
-			    	<img src="./img/not1.jpg" width="300px" height="300px"/>
-			    </a>
-		    <div class="lightbox-target" id="1">
-				<img src="./img/not1.jpg"/>
-				<a class="lightbox-close" href="#s6"></a>
-			</div>
-			    <p class="titulo">Esta es una noticia</p>
-			    <p class="parrafo">Aqui vemos que en rancho el milagro ayudamos a todo tipo de personasasdasdasdasdasfjahfkjadhd kjashfkjaasdas dasdasdadah</p>
-			</li><li>
-			    <a class="lightbox" href="#1">
-			    	<img src="./img/not1.jpg" width="300px" height="300px"/>
-			    </a>
-		    <div class="lightbox-target" id="1">
-				<img src="./img/not1.jpg"/>
-				<a class="lightbox-close" href="#s6"></a>
-			</div>
-			    <p class="titulo">Esta es una noticia</p>
-			    <p class="parrafo">Aqui vemos que en rancho el milagro ayudamos a todo tipo de personasasdasdasdasdasfjahfkjadhd kjashfkjaasdas dasdasdadah</p>
-			</li><li>
-			    <a class="lightbox" href="#1">
-			    	<img src="./img/not1.jpg" width="300px" height="300px"/>
-			    </a>
-		    <div class="lightbox-target" id="1">
-				<img src="./img/not1.jpg"/>
-				<a class="lightbox-close" href="#s6"></a>
-			</div>
-			    <p class="titulo">Esta es una noticia</p>
-			    <p class="parrafo">Aqui vemos que en rancho el milagro ayudamos a todo tipo de personasasdasdasdasdasfjahfkjadhd kjashfkjaasdas dasdasdadah</p>
-			</li><li>
-			    <a class="lightbox" href="#1">
-			    	<img src="./img/not1.jpg" width="300px" height="300px"/>
-			    </a>
-		    <div class="lightbox-target" id="1">
-				<img src="./img/not1.jpg"/>
-				<a class="lightbox-close" href="#s6"></a>
-			</div>
-			    <p class="titulo">Esta es una noticia</p>
-			    <p class="parrafo">Aqui vemos que en rancho el milagro ayudamos a todo tipo de personasasdasdasdasdasfjahfkjadhd kjashfkjaasdas dasdasdadah</p>
-			</li><li>
-			    <a class="lightbox" href="#1">
-			    	<img src="./img/not1.jpg" width="300px" height="300px"/>
-			    </a>
-		    <div class="lightbox-target" id="1">
-				<img src="./img/not1.jpg"/>
-				<a class="lightbox-close" href="#s6"></a>
-			</div>
-			    <p class="titulo">Esta es una noticia</p>
-			    <p class="parrafo">Aqui vemos que en rancho el milagro ayudamos a todo tipo de personasasdasdasdasdasfjahfkjadhd kjashfkjaasdas dasdasdadah</p>
-			</li><li>
-			    <a class="lightbox" href="#1">
-			    	<img src="./img/not1.jpg" width="300px" height="300px"/>
-			    </a>
-		    <div class="lightbox-target" id="1">
-				<img src="./img/not1.jpg"/>
-				<a class="lightbox-close" href="#s6"></a>
-			</div>
-			    <p class="titulo">Esta es una noticia</p>
-			    <p class="parrafo">Aqui vemos que en rancho el milagro ayudamos a todo tipo de personasasdasdasdasdasfjahfkjadhd kjashfkjaasdas dasdasdadah</p>
-			</li><li>
-			    <a class="lightbox" href="#1">
-			    	<img src="./img/not1.jpg" width="300px" height="300px"/>
-			    </a>
-		    <div class="lightbox-target" id="1">
-				<img src="./img/not1.jpg"/>
-				<a class="lightbox-close" href="#s6"></a>
-			</div>
-			    <p class="titulo">Esta es una noticia</p>
-			    <p class="parrafo">Aqui vemos que en rancho el milagro ayudamos a todo tipo de personasasdasdasdasdasfjahfkjadhd kjashfkjaasdas dasdasdadah</p>
+			</li>
+			<li>
+				<a href="#">
+					<div class="agregar">
+			    	<i class="glyphicon glyphicon-plus"></i>
+					</div>
+				</a>
 			</li>
 		</ul>
 	</section>
