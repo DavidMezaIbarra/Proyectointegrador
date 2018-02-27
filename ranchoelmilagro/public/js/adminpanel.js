@@ -15,13 +15,13 @@ else
 
 }
 $(document).ready(function () {
-htmlbodyHeightUpdate()
+  htmlbodyHeightUpdate()
 $( window ).resize(function() {
   htmlbodyHeightUpdate()
 });
 $( window ).scroll(function() {
   height2 = $('.main').height()
-    htmlbodyHeightUpdate()
+  htmlbodyHeightUpdate()
 });
 });
 function abrirMenu() {
