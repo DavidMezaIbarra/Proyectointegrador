@@ -206,7 +206,7 @@
 	</ul>
 </section>
 
-	<section id="s7" style="padding-top: 200px;">
+	<section id="s7" style="padding-top: 100px;background-color:#eff3f9;height:300px;">
 		<div class="container col-md-12 col-xs-12">
 			<div class="row" >
 				<div class="col-md-1 col-xs-1 col-md-offset-4 col-xs-offset-4 fb">
