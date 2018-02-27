@@ -6,12 +6,29 @@
 .container li {
     float:left;
     text-align:justify;
-    width: 300px;
+    width: 350px;
     margin-left: 1rem;
     margin-right: 1em;
     margin-top: 1rem;
 }
 
+.agregar{
+  height:437px;
+  width: auto;
+  border: 1px solid rgba(21,21,21,0.1);
+}
+.agregar:hover{
+  background-color: rgba(21,21,21,0.1);
+}
+.agregar:hover i{
+  color: white;
+}
+i{
+  font-size:40px;
+  margin-top: 60%;
+  margin-left: 40%;
+  color: #ccddaa;
+}
 .backgroundp{
   background-image: url(./img/slider3.jpg);
   filter: blur(5px);
@@ -24,6 +41,7 @@
 .wrapper {
   position: relative;
   display: inline-block;
+  width: 350px;
 }
 
 .close {

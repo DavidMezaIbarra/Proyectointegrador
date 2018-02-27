@@ -82,8 +82,10 @@
 	<div id="s4bg"></div>
 	<div id="s3bg"></div>
 	<section id="s4" style="height: auto;text-align: justify;">
-		<p class="titulo">Proposito</p>
-		<p class="parrafo">Dar atención a las personas con problemas de adicciones y dependencias que requieran de rehabilitación promoviendo la sobriedad y la satisfacción social.</p>
+		<p class="titulo" style="text-align:center;font-size:2.5rem;">Proposito</p>
+		<p class="parrafo parrafo col-xs-offset-1 col-md-offset-1" style="width:80%;text-align:justify; height:auto;font-size:2rem;">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+			sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 	</section>
 	<section id="s5">
 	</section>
@@ -204,21 +206,28 @@
 	</ul>
 </section>
 
-	<section id="s7" style="padding-top: 400px;">
+	<section id="s7" style="padding-top: 200px;">
 		<div class="container col-md-12 col-xs-12">
-			<div class="row" style="">
-				<div class="col-md-1 col-md-offset-4 fb">
+			<div class="row" >
+				<div class="col-md-1 col-xs-1 col-md-offset-4 col-xs-offset-4 fb">
 					<div id="fb"></div>
 				</div>
-				<div class="col-md-1 tw ">
+				<div class="col-md-1 col-xs-1 tw ">
 					<div id="tw"></div>
 				</div>
-				<div class="col-md-1 insta ">
+				<div class="col-md-1 col-xs-1 insta ">
 					<div id="insta"></div>
 				</div>
-				<div class="col-md-1 yt ">
+				<div class="col-md-1 col-xs-1 yt ">
 					<div id="yt"></div>
 				</div>
+			</div>
+			<div class=" row col-md-12 " style="margin-top:2%; text-align:center;">
+				<p class="about">Instituto Blas Pascal</p>
+				<p class="about">Libramiento Gomez Morin N°1000 local 7-A,  · 01 636 694 7747</p>
+				<p class="about">Nuevo Casas Grandes, Chihuahua</p>
+				<p class="about">01 636 694 7747</p>
+
 			</div>
 		</div>
 	</section>

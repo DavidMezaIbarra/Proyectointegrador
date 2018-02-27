@@ -1,115 +1,107 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 @import url('https://fonts.googleapis.com/css?family=Raleway');
-
 *{
-  margin:0px;
-  font-family: raleway;
+margin:0px;
+font-family: raleway;
 }
-
 .container {
-    overflow:hidden;
-    list-style:none;
+overflow:hidden;
+list-style:none;
 }
-
 .container li {
-    float:left;
-    text-align:justify;
-    width: 300px;
-    margin-left: 1rem;
-    margin-right: 5em;
-    margin-top: 1rem;
+float:left;
+text-align:justify;
+width: 300px;
+margin-left: 1rem;
+margin-right: 5em;
+margin-top: 1rem;
 }
-
 .container img {
-    display:block;
+display:block;
 }
-
-
 header{
-  background: rgba(0,0,0,.7);
-  height: 50px;
-  position: fixed;
-  top: 0;
-  transition: top 0.2s ease-in-out;
-  width: 100%;
-  z-index: 50;
+background: rgba(0,0,0,.7);
+height: 50px;
+position: fixed;
+top: 0;
+transition: top 0.2s ease-in-out;
+width: 100%;
+z-index: 50;
 }
 header > div > ul >li>a:hover{
-  background-color: red;
+background-color: red;
 }
 .nav-up {
-  top: -50px; // same as header height. use variables in LESS/SASS
+top: -50px; // same as header height. use variables in LESS/SASS
 }
 #s5{
-  height: 200px;
+height: 200px;
 }
 #s7{
-  height: 500px;
-  }
+height: 500px;
+}
 #s4{
-  height: auto;
-  background-color: white;
+height: auto;
+background-color: white;
 }
 .fb:hover{
 }
 #fb{
- background: url(../img/fb.png);
- background-size: cover;
- width: 30px;
- height: 30px;
- cursor: pointer;
+background: url(../img/fb.png);
+background-size: cover;
+width: 30px;
+height: 30px;
+cursor: pointer;
 }
 #fb:hover{
- background: url(../img/fbv.png);
- background-size: cover;
- width: 30px;
- height: 30px;
- cursor: pointer;
+background: url(../img/fbv.png);
+background-size: cover;
+width: 30px;
+height: 30px;
+cursor: pointer;
 }
 #tw{
- background: url(../img/twitter.png);
- background-size: cover;
- width: 30px;
- height: 30px;
- cursor: pointer;
+background: url(../img/twitter.png);
+background-size: cover;
+width: 30px;
+height: 30px;
+cursor: pointer;
 }
 #tw:hover{
- background: url(../img/twitterv.png);
- background-size: cover;
- width: 30px;
- height: 30px;
- cursor: pointer;
+background: url(../img/twitterv.png);
+background-size: cover;
+width: 30px;
+height: 30px;
+cursor: pointer;
 }
 #insta{
- background: url(../img/insta.png);
- background-size: cover;
- width: 30px;
- height: 30px;
- cursor: pointer;
+background: url(../img/insta.png);
+background-size: cover;
+width: 30px;
+height: 30px;
+cursor: pointer;
 }
 #insta:hover{
- background: url(../img/instav.png);
- background-size: cover;
- width: 30px;
- height: 30px;
- cursor: pointer;
+background: url(../img/instav.png);
+background-size: cover;
+width: 30px;
+height: 30px;
+cursor: pointer;
 }
 #yt{
- background: url(../img/yt.png);
- background-size: cover;
- width: 30px;
- height: 30px;
- cursor: pointer;
+background: url(../img/yt.png);
+background-size: cover;
+width: 30px;
+height: 30px;
+cursor: pointer;
 }
 #yt:hover{
- background: url(../img/ytv.png);
- background-size: cover;
- width: 30px;
- height: 30px;
- cursor: pointer;
+background: url(../img/ytv.png);
+background-size: cover;
+width: 30px;
+height: 30px;
+cursor: pointer;
 }
-
-
 .lightbox-target {
 position: fixed;
 top: -100%;
@@ -123,9 +115,6 @@ opacity: 0;
 transition: opacity .5s ease-in-out;
 overflow: hidden;
 }
-
-/* Styles the lightbox image, centers it vertically and horizontally, adds the zoom-in transition and makes it responsive using a combination of margin and absolute positioning */
-
 .lightbox-target img {
 margin: auto;
 position: absolute;
@@ -143,9 +132,6 @@ box-sizing: border-box;
 -o-transition: .5s ease-in-out;
 transition: .5s ease-in-out;
 }
-
-/* Styles the close link, adds the slide down transition */
-
 a.lightbox-close {
 display: block;
 width:50px;
@@ -163,9 +149,6 @@ z-index: 5000;
 -o-transition: .5s ease-in-out;
 transition: .5s ease-in-out;
 }
-
-/* Provides part of the "X" to eliminate an image from the close link */
-
 a.lightbox-close:before {
 content: "";
 display: block;
@@ -181,9 +164,6 @@ z-index: 500;
 -o-transform:rotate(45deg);
 transform:rotate(45deg);
 }
-
-/* Provides part of the "X" to eliminate an image from the close link */
-
 a.lightbox-close:after {
 content: "";
 display: block;
@@ -199,183 +179,169 @@ z-index: 500;
 -o-transform:rotate(-45deg);
 transform:rotate(-45deg);
 }
-
-/* Uses the :target pseudo-class to perform the animations upon clicking the .lightbox-target anchor */
-
 .lightbox-target:target {
 opacity: 1;
 top: 0;
 bottom: 0;
 left: 0;
 }
-
 .lightbox-target:target img {
 max-height: 100%;
 max-width: 100%;
 }
-
 .lightbox-target:target a.lightbox-close {
 top: 0px;
 z-index: 500;
 }
-
-  div#bg{
-  background-image: url(../img/bg1.jpg);
-  background-size: cover;
-  filter: brightness(50%);
-  position: absolute;
-  left: 0;
-  top: 697px;
-  width: 100%;
-  height: 700px;
-  z-index: -500;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
+div#bg{
+background-image: url(../img/bg1.jpg);
+background-size: cover;
+filter: brightness(50%);
+position: absolute;
+left: 0;
+top: 697px;
+width: 100%;
+height: 700px;
+z-index: -500;
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
 }
 .responsive-slider{
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center center;
-  background-size: cover;
-
+background-repeat: no-repeat;
+background-attachment: scroll;
+background-position: center center;
+background-size: cover;
 }
 .image-1{
-  background-image: url("../img/slider5.jpg");
+background-image: url("../img/slider5.jpg");
 }
 .image-2{
-  background-image: url("../img/slider2.jpg");
+background-image: url("../img/slider2.jpg");
 }
 .image-3{
-  background-image: url("../img/slider3.jpg");
+background-image: url("../img/slider3.jpg");
 }
-
 #nav{
-  background-color: rgba(0,0,0,.8)
+background-color: rgba(0,0,0,.8)
 }
 #s1{
-  text-align: center;
-  color: white;
-  height: 400px;
+text-align: center;
+color: white;
+height: 400px;
 }
-
 .adaptar{
-	width: 100%;
+width: 100%;
 }
 
 #nosotros{
-  color: #373a3f;
-  font-weight: 1000;
-  font-weight: bolder;
-  font-size: 3rem;
-  text-align: center;
+color: #373a3f;
+font-weight: 1000;
+font-weight: bolder;
+font-size: 3rem;
+text-align: center;
 }
-
 .nosotros{
-  background-color: rgba(20,10,15,0.5);
-  margin: 5px;
-  width: 500px;
-  color: white;
-  margin-left: 5%;
-  filter: brightness(120%);
-  -webkit-box-shadow: 0px 2px 29px 2px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 2px 29px 2px rgba(0,0,0,0.75);
-  box-shadow: 0px 2px 29px 2px rgba(0,0,0,0.75);
-  border-radius: 5px;
+background-color: rgba(20,10,15,0.5);
+margin: 5px;
+width: 500px;
+color: white;
+margin-left: 5%;
+filter: brightness(120%);
+-webkit-box-shadow: 0px 2px 29px 2px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 2px 29px 2px rgba(0,0,0,0.75);
+box-shadow: 0px 2px 29px 2px rgba(0,0,0,0.75);
+border-radius: 5px;
 }
 .nosotros h3{
-  padding-left: 15px;
-  padding-top: 15px;
+padding-left: 15px;
+padding-top: 15px;
 }
 .nosotros p{
-  padding-left: 15px;
+padding-left: 15px;
 }
 .titulo{
-  color: #373a3f;
-  font-family: "raleway";
-  font-weight: bold;
-  font-size: 2rem;
-  text-align: justify;
-
+color: #373a3f;
+font-family: "raleway";
+font-weight: bold;
+font-size: 2rem;
+text-align: justify;
+}
+.about{
+text-align: center;
+color:#373a3f;
 }
 .parrafo{
-  color: #373a3f;
-  font-family: "raleway";
-  font-size: 1.5rem;
-  text-align: justify;
-
+color: #373a3f;
+font-family: "raleway";
+font-size: 1.5rem;
+text-align: justify;
 }
 #vision{
-  background-color: rgba(255,255,255,.6);
-
+background-color: rgba(255,255,255,.6);
 }
 #s2{
-  height: auto;
-  width: 100%;
-  background-color: white;
-}
-#s3{
+height: auto;
+width: 100%;
+background-color: white;
 }
 #s4bg{
-  background: url(../img/slider2.jpg);
-  background-size: cover;
-  filter: brightness(65%);
-  width: 100%;
-  height: 270px;
-  top: 1550;
-  z-index: -50;
-  position: absolute;
-
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+background: url(../img/slider2.jpg);
+background-size: cover;
+filter: brightness(65%);
+width: 100%;
+height: 270px;
+top: 1550;
+z-index: -50;
+position: absolute;
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
 }
 #s3 h2{
-  color: white;
-  margin-left: 10%;
-  font-size: 40px;
-  font-family: 'Poppins', sans-serif;
+color: white;
+margin-left: 10%;
+font-size: 40px;
+font-family: 'Poppins', sans-serif;
 }
-
 #s1 h1{
-  font-size: 50px;
-  font-weight: 1000;
+font-size: 50px;
+font-weight: 1000;
 }
 .btnmore{
-  margin-top: 3%;
-  align-items: center;
-  width: 100px;
-  height: 100px;
-  border-radius: 100%;
-  border-style: solid;
-  background-image: url("../img/downwhite.png");
-  background-size: cover;
-  background-color: transparent;
-  border-color:white;
-  transition: ease-in .2s;
-  outline: none;
+margin-top: 3%;
+align-items: center;
+width: 100px;
+height: 100px;
+border-radius: 100%;
+border-style: solid;
+background-image: url("../img/downwhite.png");
+background-size: cover;
+background-color: transparent;
+border-color:white;
+transition: ease-in .2s;
+outline: none;
 }
 .btnmore:hover{
-  background-color: rgba(255,255,255,.2);
+background-color: rgba(255,255,255,.2);
 
 }
 .btnmore2{
-  margin-top: 10%;
-  width: 50px;
-  height: 50px;
-  border-radius: 100%;
-  border-style: solid;
-  background-image: url("../img/downwhite.png");
-  background-size: cover;
-  background-color: transparent;
-  border-color:white;
-  transition: ease-in .2s;
-  outline: none;
+margin-top: 10%;
+width: 50px;
+height: 50px;
+border-radius: 100%;
+border-style: solid;
+background-image: url("../img/downwhite.png");
+background-size: cover;
+background-color: transparent;
+border-color:white;
+transition: ease-in .2s;
+outline: none;
 }
 .btnmore2:hover{
-  background-color: rgba(255,255,255,.2);
+background-color: rgba(255,255,255,.2);
 
 }
