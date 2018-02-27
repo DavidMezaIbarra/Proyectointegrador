@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<meta charset="UTF-8">
+		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -14,13 +14,14 @@
 	<header>
 		<div  class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
 		  <ul class="nav navbar-nav">
-		  	<li><img src="{{asset('/img/logo.png')}}" class="img-responsive" alt="Responsive image" style="margin-top: 2%;"></li>
-		  	<li style="margin-left: -50px;"><a href="#s3" style="color: white;">Inicio</a></li>
-		  	<li><a href="#s2" style="color: white;">Nosotros</a></li>
-		  	<li><a href="#s6" style="color: white;">Noticias</a></li>
-				<li><a href="/panel" style="color: white;"> Admin</a></li>
+		    <li><img src="{{asset('/img/logo.png')}}" class="img-responsive" alt="Responsive image" style="margin-top: 2%;"></li>
+		    <li style="margin-left: -50px;"><a href="#s3" style="color: white;">Inicio</a></li>
+		    <li><a href="#s2" style="color: white;">Nosotros</a></li>
+		    <li><a href="#s6" style="color: white;">Noticias</a></li>
+		    <li><a href="/panel" style="color: white;"> Admin</a></li>
 		  </ul>
 		</div>
+
 	</header>
 	<section id="s3" class="carolusel slide ">
 			<div id="myCarousel" class="carousel slide col-md-13 " data-ride="carousel">

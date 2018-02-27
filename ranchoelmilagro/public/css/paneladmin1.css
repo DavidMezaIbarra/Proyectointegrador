@@ -12,6 +12,11 @@
     margin-top: 1rem;
 }
 
+.backgroundp{
+  background-image: url(./img/slider3.jpg);
+  filter: blur(5px);
+  z-index: -500;
+}
 .container img {
     display:block;
 }

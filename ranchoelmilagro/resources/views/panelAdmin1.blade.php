@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/bootstrap.css" rel="stylesheet">
+		<link rel="stylesheet" href="./css/estilos.css">
     <link rel="stylesheet" href="./css/paneladmin1.css">
 	<title>Admin</title>
 </head>
 <body>
-<div class="container col-md-12" style="background-color:#283447;">
+
+<div class="container col-md-12" style="background-color:#263238;">
 	<div class="container col-md-12" style="margin-top: 50px;background-color: white;height: auto;">
+		<div class="container col-md-12 " style="text-align:center;font-size:5rem;background-color:white;">
+			<p class="titulo" style="text-align:center;font-size:5rem;">Bienvenidos</p>
+			<p class="parrafo" style="text-align:center;font-size:2rem;">Aqui podrá esitar las noticias que aparecen en la pantalla principal </p>
+
+		</div>
 		<li>
 			<div class="wrapper">
 				<img src="{{asset('/img/bg1.jpg')}}" width="300px" height="300px"/>
