@@ -8,7 +8,7 @@
 		<link rel="stylesheet" href="./css/estilos.css">
 		<link rel="stylesheet" href="./css/animate.css">
 
-	<title>Proyecto Integrador</title>
+	<title>Rancho el milagro</title>
 </head>
 <body class="animated fadeIn">
 	<header>
