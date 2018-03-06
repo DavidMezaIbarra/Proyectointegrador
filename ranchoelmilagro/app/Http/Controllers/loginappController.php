@@ -4,13 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class indexController extends Controller
+class loginappController extends Controller
 {
   public function __construct(){
     $this->middleware('auth');
   }
-    //
-    public function index(){
-      return view('index');
+    function indexapp(){
+      return view('loginapp');
     }
 }

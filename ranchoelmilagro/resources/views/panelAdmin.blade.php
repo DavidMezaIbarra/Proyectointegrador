@@ -18,7 +18,7 @@
 			<div><p class="titulo" style="text-align: center;font-size: 5rem;">Noticias</p></div>
 			<li>
 				<div class="wrapper">
-					<img src="{{asset('/img/noticia1.jpg')}}" width="300px" height="300px"/>
+					<img src="{{asset('/img/noticia1.jpg')}}" width="300px" height="250px"/>
 					<span class="close" data-toggle="modal" data-target="#eliminar"></span>
 			  </div>
 			  <div class="wrapper">
@@ -29,7 +29,7 @@
 			</li>
 			<li>
 				<div class="wrapper">
-					<img src="{{asset('/img/noticia1.jpg')}}" width="300px" height="300px"/>
+					<img src="{{asset('/img/noticia1.jpg')}}" width="300px" height="250px"/>
 					<span class="close" data-toggle="modal" data-target="#eliminar"></span>
 			  </div>
 			  <div class="wrapper">
@@ -40,7 +40,7 @@
 			</li>
 			<li>
 				<div class="wrapper">
-					<img src="{{asset('/img/noticia1.jpg')}}" width="300px" height="300px"/>
+					<img src="{{asset('/img/noticia1.jpg')}}" width="300px" height="250px"/>
 					<span class="close" data-toggle="modal" data-target="#eliminar"></span>
 			  </div>
 			  <div class="wrapper">
@@ -51,7 +51,40 @@
 			</li>
 			<li>
 				<div class="wrapper">
-					<img src="{{asset('/img/noticia1.jpg')}}" width="300px" height="300px"/>
+					<img src="{{asset('/img/noticia1.jpg')}}" width="300px" height="250px"/>
+					<span class="close" data-toggle="modal" data-target="#eliminar"></span>
+			  </div>
+			  <div class="wrapper">
+			    	<span class="edit" data-toggle="modal" data-target="#editar"></span>
+				    <p class="titulo">Esta es una noticia</p>
+				    <p class="parrafo">Tuvimos un evento donde los niños cantaron la cancion de navidad</p>
+				</div>
+			</li>
+			<li>
+				<div class="wrapper">
+					<img src="{{asset('/img/noticia1.jpg')}}" width="300px" height="250px"/>
+					<span class="close" data-toggle="modal" data-target="#eliminar"></span>
+			  </div>
+			  <div class="wrapper">
+			    	<span class="edit" data-toggle="modal" data-target="#editar"></span>
+				    <p class="titulo">Esta es una noticia</p>
+				    <p class="parrafo">Tuvimos un evento donde los niños cantaron la cancion de navidad</p>
+				</div>
+			</li>
+			<li>
+				<div class="wrapper">
+					<img src="{{asset('/img/noticia1.jpg')}}" width="300px" height="250px"/>
+					<span class="close" data-toggle="modal" data-target="#eliminar"></span>
+			  </div>
+			  <div class="wrapper">
+			    	<span class="edit" data-toggle="modal" data-target="#editar"></span>
+				    <p class="titulo">Esta es una noticia</p>
+				    <p class="parrafo">Tuvimos un evento donde los niños cantaron la cancion de navidad</p>
+				</div>
+			</li>
+			<li>
+				<div class="wrapper">
+					<img src="{{asset('/img/noticia1.jpg')}}" width="300px" height="250px"/>
 					<span class="close" data-toggle="modal" data-target="#eliminar"></span>
 			  </div>
 			  <div class="wrapper">

@@ -11,14 +11,14 @@ h1{
 }
 
 #login{
-  background-image: url(../img/bg.jpg);
+  background-image: url(../img/fondo-login.jpg);
   background-size: cover;
   filter: brightness(50%);
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
-  height: 700px;
+  height: 100vh;
   z-index: -500;
   background-repeat: repeat-x;
   animation: animatedBackground 50s linear infinite;
@@ -46,7 +46,7 @@ input[type="submit"]{
   padding: 10px;
 }
 input[type="submit"]:hover{
-  background-color: rgba(66, 244, 167,.7);
+  background-color: rgba(122, 157, 214,1);
   cursor: pointer;
 }
 
@@ -111,7 +111,7 @@ input:focus ~ label, input:valid ~ label 		{
   width:0;
   bottom:2px;
   position:absolute;
-  background-color: rgba(66, 244, 167,.7);
+  background-color: rgb(122, 157, 214);
   transition:0.2s ease all;
   -moz-transition:0.2s ease all;
   -webkit-transition:0.2s ease all;
@@ -148,14 +148,14 @@ input:focus ~ .highlight {
 
 /* ANIMATIONS ================ */
 @-webkit-keyframes inputHighlighter {
-	from { background-color: rgba(66, 244, 167,.7); }
+	from { background-color: rgba(122, 157, 214,.7); }
   to 	{ width:0; background:transparent; }
 }
 @-moz-keyframes inputHighlighter {
-	from { background-color: rgba(66, 244, 167,.7); }
+	from { background-color: rgba(122, 157, 214,.7); }
   to 	{ width:0; background:transparent; }
 }
 @keyframes inputHighlighter {
-	from { background-color: rgba(66, 244, 167,.7); }
+	from { background-color: rgba(122, 157, 214,.7); }
   to 	{ width:0; background:transparent; }
 }

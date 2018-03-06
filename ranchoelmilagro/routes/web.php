@@ -17,3 +17,20 @@ Route::get('/panelapp','panelController@panelapp');
 Route::get('/login','loginController@login');
 Route::get('/panel','panelwebController@panelweb');
 Route::get('/perfil','perfilController@perfil');
+
+
+
+
+
+Route::group(['prefix'=>'admin','as'=>'admin.'],function(){
+ Route::get('/','panelwebController@panelweb');
+ Route::get('/login','loginController@login');
+ Route::get('/loginapp','loginappController@indexapp');
+ Route::get('/usuarios','usuariosController@index');
+ 
+ Route::resource('usuarios','usuariosController');
+});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

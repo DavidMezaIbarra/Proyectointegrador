@@ -1,9 +1,11 @@
+
+
 <html>
 <head lang="es">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="{{asset('/css/login.css')}}">
+  <link rel="stylesheet" href="{{asset('/css/loginapp.css')}}">
   <title>LogIn</title>
 </head>
 <body>
@@ -11,7 +13,7 @@
   </div>
   <div class="formulario container">
     <h1>Inicio de Sesión</h1>
-    <form action="/admin/" method="GET">
+    <form action="/panelapp" method="GET">
       <div class="group">
         <fieldset>
           <input type="text" >

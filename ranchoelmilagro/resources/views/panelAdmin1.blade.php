@@ -4,9 +4,9 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/bootstrap.css" rel="stylesheet">
-		<link rel="stylesheet" href="./css/estilos.css">
-    <link rel="stylesheet" href="./css/paneladmin1.css">
+    <link href="{{asset('/css/bootstrap.css')}}"rel="stylesheet">
+		<link rel="stylesheet" href="{{asset('/css/estilos.css')}}">
+    <link rel="stylesheet" href="{{asset('/css/paneladmin1.css')}}">
 	<title>Admin</title>
 </head>
 <body>
@@ -236,7 +236,7 @@
 	};
 </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/nav.js"></script>
+<script src="{{asset('/js/bootstrap.min.js')}}"></script>
+<script src="{{asset('/js/nav.js')}}"></script>
 </body>
 </html>
