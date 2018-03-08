@@ -30,7 +30,7 @@ class usuariosController extends Controller
           'password'=>bcrypt($req->contrasena)
         ]);
         return redirect('/admin/usuarios')
-        -with('message','usuario agregado');
+        ->with('mensaje','usuario agregado');
       }
 
       dd($req->nombre);

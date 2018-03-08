@@ -8,6 +8,13 @@ font-family: raleway;
 overflow:hidden;
 list-style:none;
 }
+.modal_inp{
+  border: none;
+  border-bottom: .3px solid #a8a8a8;
+   width: 100%;
+    outline: none;
+    height: 50px; font-size: 2rem;
+}
 .container li {
 float:left;
 text-align:justify;

@@ -27,6 +27,13 @@
 					</ul>
 				</div>
 			@endif
+			@if(session()->has('mensaje'))
+				<div class="alert alert-success">
+					{{session()->get('mensaje')}}
+				</div>
+			@endif
+
+
 		{{Form::open( array('url'=>'/admin/usuarios','files'=>true)) }}
 		</div>
 			<ul class="form-style-1">

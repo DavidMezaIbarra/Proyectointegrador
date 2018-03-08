@@ -17,13 +17,12 @@
 		    <li style="margin-left: -50px;"><a href="/" style="color: white;">Inicio</a></li>
 		  </ul>
 		</div>
-
 	</header>
 <div class="container col-md-12" style="background-color:#263238;">
 	<div class="container col-md-12" style="margin-top: 50px;background-color: white;height: auto;">
 		<div class="container col-md-12  " style="text-align:center;font-size:5rem;background-color:white;">
 			<p class="titulo" style="text-align:center;font-size:5rem;">Bienvenidos</p>
-			<p class="parrafo" style="text-align:center;font-size:2rem;">Aqui podrá esitar las noticias que aparecen en la pantalla principal </p>
+			<p class="parrafo" style="text-align:center;font-size:2rem;">Aqui podrá editar las noticias que aparecen en la pantalla principal </p>
 
 		</div>
 		<div class="container col-md-12" style="margin-left:5%;">
@@ -179,11 +178,11 @@
                      <h4 class="modal-title" id="myModalLabel">Editar</h4>
                 </div>
                 <div class="modal-body">
-                	<form action="">
-					<input type="text" style="border: none;border-bottom: .3px solid #a8a8a8; width: 100%; outline: none; height: 50px; font-size: 2rem;" placeholder="Titulo de la noticia"><br>
-					<input type="text" style="border: none;border-bottom: .3px solid #a8a8a8; width: 100%; outline: none; height: 50px; font-size: 2rem;" placeholder="Descripción de la noticia"><br>
-					<textarea style="font-family: Arial;font-size: 12pt;width:100%;height:50vh; resize: none;"></textarea>
-					</form>
+          {{Form::open( array('url'=>'/admin/','files'=>true)) }}
+						{{Form::text('Titulo','',array('style'=>'border: none;border-bottom: .3px solid #a8a8a8; width: 100%; outline: none; height: 50px; font-size: 2rem;','placeholder'=>'Titulo de noticia'))}}
+						{{Form::text('Descripcion','',array('style'=>'border: none;border-bottom: .3px solid #a8a8a8; width: 100%; outline: none; height: 50px; font-size: 2rem;','placeholder'=>'Descripcion de noticia'))}}
+						{{Form::textarea('Noticia','',array('style'=>'font-family: Raleway;font-size: 12pt;width:100%;height:50vh; resize: none;','placeholder'=>'Titulo de noticia'))}}
+					{{Form::close()}}
 					<input id="uploadFile" placeholder="Archivo Elegido" disabled="disabled" />
 					<div class="fileUpload btn btn-primary">
 					    <span>Subir Archivo</span>
@@ -209,11 +208,11 @@
                      <h4 class="modal-title" id="myModalLabel">Agregar</h4>
                 </div>
                 <div class="modal-body">
-                	<form action="">
-					<input type="text" style="border: none;border-bottom: .3px solid #a8a8a8; width: 100%; outline: none; height: 50px; font-size: 2rem;" placeholder="Titulo de la noticia"><br>
-					<input type="text" style="border: none;border-bottom: .3px solid #a8a8a8; width: 100%; outline: none; height: 50px; font-size: 2rem;" placeholder="Descripción de la noticia"><br>
-					<textarea style="font-family: Arial;font-size: 12pt;width:100%;height:50vh; resize: none;" placeholder="Inserte la noticia aqui"></textarea>
-					</form>
+									{{Form::open( array('url'=>'/admin/','files'=>true)) }}
+										{{Form::text('Titulo','',array('style'=>'border: none;border-bottom: .3px solid #a8a8a8; width: 100%; outline: none; height: 50px; font-size: 2rem;','placeholder'=>'Titulo de noticia'))}}
+										{{Form::text('Descripcion','',array('style'=>'border: none;border-bottom: .3px solid #a8a8a8; width: 100%; outline: none; height: 50px; font-size: 2rem;','placeholder'=>'Descripcion de noticia'))}}
+										{{Form::textarea('Noticia','',array('style'=>'font-family: Raleway;font-size: 12pt;width:100%;height:50vh; resize: none;','placeholder'=>'Noticia'))}}
+									{{Form::close()}}
 					<input id="uploadFile" placeholder="Archivo Elegido" disabled="disabled" />
 					<div class="fileUpload btn btn-primary">
 					    <span>Subir Archivo</span>
