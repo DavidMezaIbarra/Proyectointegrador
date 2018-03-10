@@ -18,7 +18,7 @@
 		    <li style="margin-left: -50px;"><a href="#s3" style="color: white;">Inicio</a></li>
 		    <li><a href="#s2" style="color: white;">Nosotros</a></li>
 		    <li><a href="#s6" style="color: white;">Noticias</a></li>
-		    <li><a href="/admin/login" style="color: white;"> Admin</a></li>
+		    <li><a href="/admin/" style="color: white;"> Admin</a></li>
 		  </ul>
 		</div>
 

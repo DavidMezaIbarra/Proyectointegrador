@@ -35,11 +35,7 @@
 					<li>
 							<label>Cambiar contraseña <span class="required">*</span></label>
 							<input type="checkbox" name="field3" />
-					</li>
-					<li>
-							<label>Contraseña anterior <span class="required">*</span> </label>
-							{{Form::email('nombre','',array('class'=>'form-control','placeholder'=>''))}}
-					</li>
+					</li>					
 					<li>
 							<label>Nueva contraseña <span class="required">*</span> </label>
 							{{Form::password('contraseña','',array('class'=>'form-control','placeholder'=>''))}}

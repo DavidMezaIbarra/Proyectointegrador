@@ -7,7 +7,13 @@ use Illuminate\Http\Request;
 class loginController extends Controller
 {
     //
-    public function login(){
-      return view('login');
+    public function __construct(){
+     $this->middleware('auth');
     }
+    public function index(){
+      return view('paneladmin1');
+    }
+
+
+
 }

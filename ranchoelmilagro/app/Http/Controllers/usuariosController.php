@@ -12,6 +12,7 @@ class usuariosController extends Controller
     public function index(){
       return view('usuarios');
     }
+
     public function store(Request $req){
       //validando datos
       $validator = Validator::make($req->all(),[

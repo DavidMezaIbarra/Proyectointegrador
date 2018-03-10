@@ -12,5 +12,7 @@ class panelController extends Controller
   //  }
     public function panelapp(){
       return view('panelAdmin');
+
     }
+
 }

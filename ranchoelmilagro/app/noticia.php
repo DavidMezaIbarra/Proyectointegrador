@@ -11,7 +11,7 @@ class noticia extends Model
     protected $table = "noticia";
 
     protected $fillable=[
-      'Id_usuario','Imagen','Noticia','Titulo_noticia'
+      'Id_usuario','Imagen','Noticia','Titulo_noticia','Descripcion_noticia'
     ];
 
 

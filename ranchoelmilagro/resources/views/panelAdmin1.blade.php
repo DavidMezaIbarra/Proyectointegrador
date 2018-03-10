@@ -15,12 +15,46 @@
 		  <ul class="nav navbar-nav">
 		    <li><img src="{{asset('/img/logo.png')}}" class="img-responsive" alt="Responsive image" style="margin-top: 2%;"></li>
 		    <li style="margin-left: -50px;"><a href="/" style="color: white;">Inicio</a></li>
+				<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
+								{{ Auth::user()->name }} <span class="caret"></span>
+						</a>
+
+						<ul class="dropdown-menu">
+								<li>
+										<a href="{{ route('logout') }}"
+												onclick="event.preventDefault();
+																 document.getElementById('logout-form').submit();">
+												Logout
+										</a>
+
+										<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+												{{ csrf_field() }}
+										</form>
+								</li>
+						</ul>
+				</li>
 		  </ul>
 		</div>
 	</header>
 <div class="container col-md-12" style="background-color:#263238;">
 	<div class="container col-md-12" style="margin-top: 50px;background-color: white;height: auto;">
 		<div class="container col-md-12  " style="text-align:center;font-size:5rem;background-color:white;">
+			@if($errors->any())
+				<div class="alert alert-warning alert-dismissible fade in">
+  				<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+					<ul>
+						@foreach($errors->all() as $error)
+							<li>{{$error}}</li>
+						@endforeach
+					</ul>
+				</div>
+			@endif
+			@if(session()->has('mensaje'))
+				<div class="alert alert-success">
+					{{session()->get('mensaje')}}
+				</div>
+			@endif
 			<p class="titulo" style="text-align:center;font-size:5rem;">Bienvenidos</p>
 			<p class="parrafo" style="text-align:center;font-size:2rem;">Aqui podrá editar las noticias que aparecen en la pantalla principal </p>
 
@@ -201,29 +235,31 @@
 <div class="modal fade" id="Agregar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="vertical-alignment-helper">
         <div class="modal-dialog vertical-align-center">
-            <div class="modal-content">
+						{{Form::open( array('url'=>'/admin/','files'=>true)) }}
+						<div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Cancelar</span>
                     </button>
                      <h4 class="modal-title" id="myModalLabel">Agregar</h4>
                 </div>
                 <div class="modal-body">
-									{{Form::open( array('url'=>'/admin/','files'=>true)) }}
+
 										{{Form::text('Titulo','',array('style'=>'border: none;border-bottom: .3px solid #a8a8a8; width: 100%; outline: none; height: 50px; font-size: 2rem;','placeholder'=>'Titulo de noticia'))}}
 										{{Form::text('Descripcion','',array('style'=>'border: none;border-bottom: .3px solid #a8a8a8; width: 100%; outline: none; height: 50px; font-size: 2rem;','placeholder'=>'Descripcion de noticia'))}}
 										{{Form::textarea('Noticia','',array('style'=>'font-family: Raleway;font-size: 12pt;width:100%;height:50vh; resize: none;','placeholder'=>'Noticia'))}}
-									{{Form::close()}}
+
 					<input id="uploadFile" placeholder="Archivo Elegido" disabled="disabled" />
 					<div class="fileUpload btn btn-primary">
 					    <span>Subir Archivo</span>
-					    <input id="uploadBtn" type="file" class="upload" />
+					    <input id="uploadBtn" type="file" class="upload" name="Imagen" />
 					</div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Agregar</button>
+										{{Form::submit('Agregar',array('class'=>'btn btn-primary'))}}
                 </div>
             </div>
+						{{Form::close()}}
         </div>
     </div>
 </div>

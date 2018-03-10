@@ -18,18 +18,28 @@ Route::get('/login','loginController@login');
 Route::get('/panel','panelwebController@panelweb');
 Route::get('/perfil','perfilController@perfil');
 
+//Route::post('/login2','loginController@doLogin');
+
 
 
 
 
 Route::group(['prefix'=>'admin','as'=>'admin.'],function(){
- Route::get('/','panelwebController@panelweb');
- Route::get('/login','loginController@login');
+ Route::get('/','panelwebController@index');
+ Route::post('/','panelwebController@store');
+ Route::get('/login','loginController@index');
  Route::get('/loginapp','loginappController@indexapp');
+
  Route::get('/usuarios','usuariosController@index');
- 
+
+ Route::resource('panelWebController','panelwebController');
+
  Route::resource('usuarios','usuariosController');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
 
