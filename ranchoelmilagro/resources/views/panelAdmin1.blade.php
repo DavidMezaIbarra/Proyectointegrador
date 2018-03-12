@@ -17,7 +17,7 @@
 		    <li style="margin-left: -50px;"><a href="/" style="color: white;">Inicio</a></li>
 				<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
-								{{ Auth::user()->name }} <span class="caret"></span>
+								{{ Auth::user()->name }} <span class="caret" style="color:white;"></span>
 						</a>
 
 						<ul class="dropdown-menu">
@@ -39,10 +39,10 @@
 	</header>
 <div class="container col-md-12" style="background-color:#263238;">
 	<div class="container col-md-12" style="margin-top: 50px;background-color: white;height: auto;">
-		<div class="container col-md-12  " style="text-align:center;font-size:5rem;background-color:white;">
+		<div class="input-group col-md-12 col-md-offset-0">
 			@if($errors->any())
 				<div class="alert alert-warning alert-dismissible fade in">
-  				<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+					<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
 					<ul>
 						@foreach($errors->all() as $error)
 							<li>{{$error}}</li>
@@ -50,11 +50,16 @@
 					</ul>
 				</div>
 			@endif
+
 			@if(session()->has('mensaje'))
-				<div class="alert alert-success">
-					{{session()->get('mensaje')}}
+				<div class="alert alert-success alert-dismissible fade in" style="text-align:center;">
+					<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+					<label for="">Noticia Agregada</label>
 				</div>
 			@endif
+		</div>
+		<div class="container col-md-12  " style="text-align:center;font-size:5rem;background-color:white;">
+
 			<p class="titulo" style="text-align:center;font-size:5rem;">Bienvenidos</p>
 			<p class="parrafo" style="text-align:center;font-size:2rem;">Aqui podrá editar las noticias que aparecen en la pantalla principal </p>
 
@@ -227,6 +232,7 @@
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary">Editar</button>
                 </div>
+
             </div>
         </div>
     </div>

@@ -14,8 +14,9 @@
 	@extends('/includes/navs')
 	<div class="main">
 	<!-- Content Here -->
-	<section id="s6" style="height: auto;">
-    <h1>Bienvenido Administrador</h1>
+	<section id="s6" style="height: auto;margin-top:80px;">
+    <h1>Bienvenidos Administrador</h1>
+		<p style="font-weight:600;font-size:2rem">Agregar Usuario</p>
 		<div class="input-group col-md-12 col-md-offset-0">
 			@if($errors->any())
 				<div class="alert alert-warning alert-dismissible fade in">

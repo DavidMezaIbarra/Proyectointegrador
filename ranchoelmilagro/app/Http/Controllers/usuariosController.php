@@ -27,7 +27,7 @@ class usuariosController extends Controller
           ->withErrors($validator);
       }else{
         User::create([
-          'name'=>$req->nombre,
+          'email'=>$req->nombre,
           'password'=>bcrypt($req->contrasena)
         ]);
         return redirect('/admin/usuarios')

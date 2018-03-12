@@ -1,14 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web');
-*{
-  padding: 0px;
-  margin: 0px;
-  font-family: 'Titillium Web', sans-serif;
-}
-h1{
-  color: white;
-  text-align: center;
-  font-family: 'Titillium Web', sans-serif;
-}
 
 #login{
   background-image: url(../img/bg.jpg);
@@ -27,13 +17,6 @@ h1{
 	from { background-position: 0 0; }
 	to { background-position: 100% 0; }
 }
-.formulario{
-  width: 60%;
-  height: 60%;
-  background-color: rgba(177, 181, 188,.6);
-  margin-top: 15%;
-  margin-left: 20%;
-}
 
 input[type="submit"]{
   border-bottom: none;
@@ -48,26 +31,6 @@ input[type="submit"]{
 input[type="submit"]:hover{
   background-color: rgba(66, 244, 167,.7);
   cursor: pointer;
-}
-
-* { box-sizing:border-box;border: none;}
-.container{
-  font-family:'Roboto';
-  width:600px;
-  margin:30px auto 0;
-  display:block;
-  padding:10px 50px 50px;
-  margin-top: 10%;
-}
-
-.group{
-  position:relative;
-  margin-bottom:45px;
-  width: 50%;
-  margin-left: 20%;
-}
-.group:first-child{
-  margin-top: 15%;
 }
 input{
   font-size:15px;
@@ -104,7 +67,7 @@ input:focus ~ label, input:valid ~ label 		{
 }
 
 /* BOTTOM BARS ================================= */
-.bar 	{ position:relative; display:block; width:300px; }
+.bar 	{ position:relative; display:block; width:100%; }
 .bar:before, .bar:after 	{
   content:'';
   height:2px;
@@ -132,7 +95,7 @@ input:focus ~ .bar:before, input:focus ~ .bar:after {
 .highlight {
   position:absolute;
   height:60%;
-  width:120%;
+  width:100%;
   top:25%;
   left:0;
   pointer-events:none;
