@@ -14,6 +14,7 @@
 	<header>
 		<div  class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
 		  <ul class="nav navbar-nav">
+				<li><img src="{{asset('/img/logoiglesia.png')}}" class="img-responsive" alt="Responsive image" style="width:50px;heightauto;"></li>
 		    <li><img src="{{asset('/img/logo.png')}}" class="img-responsive" alt="Responsive image" style="margin-top: 2%;"></li>
 		    <li style="margin-left: -50px;"><a href="#s3" style="color: white;">Inicio</a></li>
 		    <li><a href="#s2" style="color: white;">Nosotros</a></li>
@@ -60,10 +61,7 @@
 				<p id="nosotros">Nosotros</p>
 			<p class="parrafo col-xs-offset-1 col-md-offset-1" style="width:80%;text-align:justify; height:auto;">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
 				sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-				 irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-				 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-				 id est laborum.
+				 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 			</p>
 		</div>
 	</section>
@@ -92,118 +90,55 @@
 <section id="s6" style="height: auto;">
 	<ul class="container">
 		<div><p class="titulo" style="text-align: center;font-size: 5rem;">Noticias</p></div>
-	    <li>
-		    <a class="lightbox" href="#1">
-		    	<img src="{{asset('./img/bg1.jpg')}}" width="300px" height="300px"/>
-		    </a>
-	    <div class="lightbox-target" id="1">
-			<img src="{{asset('./img/bg1.jpg')}}"/>
-			<a class="lightbox-close" href="#s6"></a>
-		</div>
-		    <p class="titulo">Esta es una noticia</p>
-		    <p class="parrafo">Aqui vemos que en rancho el milagro ayudamos a todo tipo de personasasdasdasdasdasfjahfkjadhd kjashfkjaasdas dasdasdadah</p>
-		</li> <li>
-		    <a class="lightbox" href="#2">
-		    	<img src="{{asset('./img/not1.jpg')}}" width="300px" height="300px"/>
-		    </a>
-	    <div class="lightbox-target" id="2">
-			<img src="{{asset('./img/not1.jpg')}}"/>
-			<a class="lightbox-close" href="#s6"></a>
-		</div>
-		    <p class="titulo">Esta es una noticia</p>
-		    <p class="parrafo">Aqui vemos que en rancho el milagro ayudamos a todo tipo de personasasdasdasdasdasfjahfkjadhd kjashfkjaasdas dasdasdadah</p>
-		</li> <li>
-		    <a class="lightbox" href="#1">
-		    	<img src="{{asset('./img/not1.jpg')}}" width="300px" height="300px"/>
-		    </a>
-	    <div class="lightbox-target" id="1">
-			<img src="{{asset('./img/not1.jpg')}}"/>
-			<a class="lightbox-close" href="#s6"></a>
-		</div>
-		    <p class="titulo">Esta es una noticia</p>
-		    <p class="parrafo">Aqui vemos que en rancho el milagro ayudamos a todo tipo de personasasdasdasdasdasfjahfkjadhd kjashfkjaasdas dasdasdadah</p>
-		</li> <li>
-		    <a class="lightbox" href="#1">
-		    	<img src="{{asset('./img/not1.jpg')}}" width="300px" height="300px"/>
-		    </a>
-	    <div class="lightbox-target" id="1">
-			<img src="{{asset('./img/not1.jpg')}}"/>
-			<a class="lightbox-close" href="#s6"></a>
-		</div>
-		    <p class="titulo">Esta es una noticia</p>
-		    <p class="parrafo">Aqui vemos que en rancho el milagro ayudamos a todo tipo de personasasdasdasdasdasfjahfkjadhd kjashfkjaasdas dasdasdadah</p>
-		</li> <li>
-		    <a class="lightbox" href="#1">
-		    	<img src="{{asset('./img/not1.jpg')}}" width="300px" height="300px"/>
-		    </a>
-	    <div class="lightbox-target" id="1">
-			<img src="{{asset('./img/not1.jpg')}}"/>
-			<a class="lightbox-close" href="#s6"></a>
-		</div>
-		    <p class="titulo">Esta es una noticia</p>
-		    <p class="parrafo">Aqui vemos que en rancho el milagro ayudamos a todo tipo de personasasdasdasdasdasfjahfkjadhd kjashfkjaasdas dasdasdadah</p>
-		</li><li>
-		    <a class="lightbox" href="#1">
-		    	<img src="{{asset('./img/not1.jpg')}}" width="300px" height="300px"/>
-		    </a>
-	    <div class="lightbox-target" id="1">
-			<img src="{{asset('/img/not1.jpg')}}"/>
-			<a class="lightbox-close" href="#s6"></a>
-		</div>
-		    <p class="titulo">Esta es una noticia</p>
-		    <p class="parrafo">Aqui vemos que en rancho el milagro ayudamos a todo tipo de personasasdasdasdasdasfjahfkjadhd kjashfkjaasdas dasdasdadah</p>
-		</li><li>
-		    <a class="lightbox" href="#1">
-		    	<img src="{{asset('/img/not1.jpg')}}" width="300px" height="300px"/>
-		    </a>
-	    <div class="lightbox-target" id="1">
-			<img src="{{asset('/img/not1.jpg')}}"/>
-			<a class="lightbox-close" href="#s6"></a>
-		</div>
-		    <p class="titulo">Esta es una noticia</p>
-		    <p class="parrafo">Aqui vemos que en rancho el milagro ayudamos a todo tipo de personasasdasdasdasdasfjahfkjadhd kjashfkjaasdas dasdasdadah</p>
-		</li><li>
-		    <a class="lightbox" href="#1">
-		    	<img src="{{asset('/img/not1.jpg')}}" width="300px" height="300px"/>
-		    </a>
-	    <div class="lightbox-target" id="1">
-			<img src="{{asset('/img/not1.jpg')}}"/>
-			<a class="lightbox-close" href="#s6"></a>
-		</div>
-		    <p class="titulo">Esta es una noticia</p>
-		    <p class="parrafo">Aqui vemos que en rancho el milagro ayudamos a todo tipo de personasasdasdasdasdasfjahfkjadhd kjashfkjaasdas dasdasdadah</p>
-		</li><li>
-		    <a class="lightbox" href="#1">
-		    	<img src="{{asset('/img/not1.jpg')}}" width="300px" height="300px"/>
-		    </a>
-	    <div class="lightbox-target" id="1">
-			<img src="{{asset('/img/not1.jpg')}}"/>
-			<a class="lightbox-close" href="#s6"></a>
-		</div>
-		    <p class="titulo">Esta es una noticia</p>
-		    <p class="parrafo">Aqui vemos que en rancho el milagro ayudamos a todo tipo de personasasdasdasdasdasfjahfkjadhd kjashfkjaasdas dasdasdadah</p>
-		</li><li>
-		    <a class="lightbox" href="#1">
-		    	<img src="{{asset('/img/not1.jpg')}}" width="300px" height="300px"/>
-		    </a>
-	    <div class="lightbox-target" id="1">
-			<img src="{{asset('/img/not1.jpg')}}"/>
-			<a class="lightbox-close" href="#s6"></a>
-		</div>
-		    <p class="titulo">Esta es una noticia</p>
-		    <p class="parrafo">Aqui vemos que en rancho el milagro ayudamos a todo tipo de personasasdasdasdasdasfjahfkjadhd kjashfkjaasdas dasdasdadah</p>
-		</li><li>
-		    <a class="lightbox" href="#1">
-		    	<img src="{{asset('/img/not1.jpg')}}" width="300px" height="300px"/>
-		    </a>
-	    <div class="lightbox-target" id="1">
-			<img src="{{asset('/img/not1.jpg')}}"/>
-			<a class="lightbox-close" href="#s6"></a>
-		</div>
-		    <p class="titulo">Esta es una noticia</p>
-		    <p class="parrafo">Aqui vemos que en rancho el milagro ayudamos a todo tipo de personasasdasdasdasdasfjahfkjadhd kjashfkjaasdas dasdasdadah</p>
-		</li>
+		@forelse($noticias as $reg)
+					<li>
+				<div class="modalclic" style="width:360px;border-radius:10px;"  data-text="{{$reg->Noticia}}">
+					<div class="wrapper" style="margin-left:5px;">
+						<a href="#s6">
+							<div class="agregar " data-toggle="modal" data-target="#editar">
+								<img src="{{asset('/img/noticias/'.$reg->Imagen)}}" width="350px" height="350px" style="background-size:cover;border-radius:10px;"/>
+							</div>
+						</a>
+
+					 </div>
+				  <div class="wrapper modalclic2" style="height:120px;">
+				    	<span class="edit" data-toggle="modal" data-target="#editar"></span>
+					    <p id="1" class="titulo">{{$reg->Titulo_noticia}}</p>
+					    <h2 id="2" class="parrafo" style="">{{$reg->Descripcion_noticia}}</h2>
+					</div>
+					@empty
+						<p>Sin registros</p>
+					@endforelse
+					</div>
+				</li>
+
+				<li>
+
+				</li>
 	</ul>
+
+	<div class="modal fade" id="editar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	    <div class="vertical-alignment-helper">
+	        <div class="modal-dialog vertical-align-center">
+	            <div class="">
+	                <div class="modal-header" style="border:none;margin-bottom:-5%;">
+	                    <button type="button" class="close" data-dismiss="modal" style="color:white;"><span aria-hidden="true"style="color:white;font-size:2rem;">X</span><span class="sr-only" style="color:white;">Cancelar</span>
+	                    </button>
+	                     <h4 class="modal-title" id="titlemodal" style="color:white;">{{$reg->Titulo_noticia}}</h4>
+	                </div>
+	                <div class="modal-body">
+										<img id="imagenmodal"src="{{asset('/img/noticias/'.$reg->Imagen)}}" style="display:block;margin:auto;background-color:white;max-width:100%;max-height:100%;">
+
+									</div>
+	                <div class="modal-footer" style="background-color:white;">
+										<div class="parrafo" id="bodylabel"style="color:#525963;font-family:raleway;">
+												{{$reg->Noticia}}
+										</div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
 </section>
 
 	<section id="s7" style="padding-top: 100px;background-color:#eff3f9;height:300px;">
@@ -227,12 +162,12 @@
 				<p class="about">Libramiento Gomez Morin N°1000 local 7-A,  · 01 636 694 7747</p>
 				<p class="about">Nuevo Casas Grandes, Chihuahua</p>
 				<p class="about">01 636 694 7747</p>
-
 			</div>
 		</div>
 	</section>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 
 <script>
 $(document).ready(function(){
@@ -247,6 +182,16 @@ $(document).ready(function(){
       });
     } // End if
   });
+	$('.modalclic').on('click',function(event){
+		var ruta = $(this).find('img').attr('src');
+		$('#imagenmodal').attr('src',ruta);
+
+		var ruta2=$(this).find('p').text();
+		$('#titlemodal').text(ruta2);
+
+		var ruta3=$(this).attr('data-text');
+		$('#bodylabel').text(ruta3);
+	});
 });
 </script>
 <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>

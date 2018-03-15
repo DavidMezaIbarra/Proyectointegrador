@@ -10,7 +10,13 @@ class usuariosController extends Controller
 {
 
     public function index(){
-      return view('usuarios');
+      $registros=\DB::table('users')
+      //para seleccionar algo con where ->where('id','=','1')
+        ->orderBy('id','asc')
+        //limite->take(10)
+        ->get();
+      return view('usuarios')
+      ->with('usuarios',$registros);
     }
 
     public function store(Request $req){
@@ -33,8 +39,16 @@ class usuariosController extends Controller
         return redirect('/admin/usuarios')
         ->with('mensaje','usuario agregado');
       }
-
       dd($req->nombre);
+    }//function validator
+    public function destroy($id){
+      $usuario=User::find($id);
+      /*para eliminar imagen
+      if(file_exists(public_path('/img/noticia/'.$usuario->imagen))){
+        unlink(public_path('img/noticias/'.$usuario->imagen));
+    }*/
+    $usuario->delete();
+    return redirect('/admin/usuarios');
 
-    }
+    }//function destroy
 }

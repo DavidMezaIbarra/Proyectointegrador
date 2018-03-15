@@ -10,13 +10,19 @@ use Validator;
 class panelwebController extends Controller
 {
     //
-    public function __construct(){
-     $this->middleware('auth');
-    }
-    public function index(){
-      //dd(Auth::user()->id);
-      return view('panelAdmin1');
-    }
+  public function __construct(){
+   $this->middleware('auth');
+  }
+  public function index(){
+    $noticias=\DB::table('noticia')
+    //para seleccionar algo con where ->where('id','=','1')
+      ->orderBy('id_noticia','desc')
+      //limite->take(10)
+      ->get();
+    //dd(Auth::user()->id);
+    return view('panelAdmin1')
+      ->with('noticias',$noticias);
+  }
 
     public function store(Request $req){
       //validando datos

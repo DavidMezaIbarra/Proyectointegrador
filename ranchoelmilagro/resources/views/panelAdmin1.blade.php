@@ -13,8 +13,12 @@
 	<header>
 		<div  class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
 		  <ul class="nav navbar-nav">
-		    <li><img src="{{asset('/img/logo.png')}}" class="img-responsive" alt="Responsive image" style="margin-top: 2%;"></li>
-		    <li style="margin-left: -50px;"><a href="/" style="color: white;">Inicio</a></li>
+				<li><img src="{{asset('/img/logoiglesia.png')}}" class="img-responsive" alt="Responsive image" style="width:50px;heightauto;"></li>
+		    <li>
+					<img src="{{asset('/img/logo.png')}}" class="img-responsive" alt="Responsive image" style="margin-top: 2%;">
+				</li>
+
+		    <li style="margin-left:-50px;"><a href="/" style="color: white;">Inicio</a></li>
 				<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
 								{{ Auth::user()->name }} <span class="caret" style="color:white;"></span>
@@ -25,12 +29,17 @@
 										<a href="{{ route('logout') }}"
 												onclick="event.preventDefault();
 																 document.getElementById('logout-form').submit();">
-												Logout
+												Cerrar sesión
 										</a>
-
 										<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
 												{{ csrf_field() }}
 										</form>
+								</li>
+								<li>
+										<a href="/admin/usuarios">
+												Agregar usuario
+										</a>
+
 								</li>
 						</ul>
 				</li>
@@ -41,7 +50,7 @@
 	<div class="container col-md-12" style="margin-top: 50px;background-color: white;height: auto;">
 		<div class="input-group col-md-12 col-md-offset-0">
 			@if($errors->any())
-				<div class="alert alert-warning alert-dismissible fade in">
+				<div class="alert alert-warning alert-dismissible fade in" style="height:100px;">
 					<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
 					<ul>
 						@foreach($errors->all() as $error)
@@ -65,118 +74,24 @@
 
 		</div>
 		<div class="container col-md-12" style="margin-left:5%;">
-		<li>
-			<div class="wrapper">
-				<img src="{{asset('/img/bg1.jpg')}}" width="350px" height="350px"/>
+@forelse($noticias as $reg)
+			<li>
+		<div style="background-color:#eff3f7;width:360px;border-radius:10px;">
+			<div class="wrapper" style="margin-left:5px;margin-top:5px;">
+				<img src="{{asset('/img/noticias/'.$reg->Imagen)}}" width="350px" height="350px" style="background-size:all;border-radius:10px;"/>
 				<span class="close" data-toggle="modal" data-target="#eliminar"></span>
 		  </div>
-		  <div class="wrapper">
+		  <div class="wrapper" style="height:120px;">
 		    	<span class="edit" data-toggle="modal" data-target="#editar"></span>
-			    <p class="titulo">Esta es una noticia</p>
-			    <p class="parrafo">Aqui vemos que en rancho el milagro ayudamos a todo tipo de perms aklfakfnkadshcfkmadg bfjagfkjadshkfjha skjfhaskjhfkjadshfkadshfkjhsdkfhadskjfhadslf
-						adsfadskfkjadshfkhadkfhdklfjadskjf
-						adsfjkladsjfladsjf
-						asjklfjaslfj alsdjsonasa sdasdasdasdasf jahfkjadhd kjashfkjaasdas dasdasdadah</p>
+			    <p class="titulo">{{$reg->Titulo_noticia}}</p>
+			    <p class="parrafo" style="">{{$reg->Descripcion_noticia}}</p>
+			</div>
+			@empty
+				<p>Sin registros</p>
+			@endforelse
 			</div>
 		</li>
-		<li>
-			<div class="wrapper">
-				<img src="{{asset('/img/bg1.jpg')}}" width="350px" height="350px"/>
-				<span class="close" data-toggle="modal" data-target="#eliminar"></span>
-		  </div>
-		  <div class="wrapper">
-		    	<span class="edit" data-toggle="modal" data-target="#editar"></span>
-			    <p class="titulo">Esta es una noticia</p>
-			    <p class="parrafo">Aqui vemos que en rancho el milagro ayudamos a todo tipo de perms aklfakfnkadshcfkmadg bfjagfkjadshkfjha skjfhaskjhfkjadshfkadshfkjhsdkfhadskjfhadslf
-						adsfadskfkjadshfkhadkfhdklfjadskjf
-						adsfjkladsjfladsjf
-						asjklfjaslfj alsdjsonasa sdasdasdasdasf jahfkjadhd kjashfkjaasdas dasdasdadah</p>
-			</div>
-		</li>
-		<li>
-			<div class="wrapper">
-				<img src="{{asset('/img/bg1.jpg')}}" width="350px" height="350px"/>
-				<span class="close" data-toggle="modal" data-target="#eliminar"></span>
-		  </div>
-		  <div class="wrapper">
-		    	<span class="edit" data-toggle="modal" data-target="#editar"></span>
-			    <p class="titulo">Esta es una noticia</p>
-			    <p class="parrafo">Aqui vemos que en rancho el milagro ayudamos a todo tipo de perms aklfakfnkadshcfkmadg bfjagfkjadshkfjha skjfhaskjhfkjadshfkadshfkjhsdkfhadskjfhadslf
-						adsfadskfkjadshfkhadkfhdklfjadskjf
-						adsfjkladsjfladsjf
-						asjklfjaslfj alsdjsonasa sdasdasdasdasf jahfkjadhd kjashfkjaasdas dasdasdadah</p>
-			</div>
-		</li>
-		<li>
-			<div class="wrapper">
-				<img src="{{asset('/img/bg1.jpg')}}" width="350px" height="350px"/>
-				<span class="close" data-toggle="modal" data-target="#eliminar"></span>
-		  </div>
-		  <div class="wrapper">
-		    	<span class="edit" data-toggle="modal" data-target="#editar"></span>
-			    <p class="titulo">Esta es una noticia</p>
-			    <p class="parrafo">Aqui vemos que en rancho el milagro ayudamos a todo tipo de perms aklfakfnkadshcfkmadg bfjagfkjadshkfjha skjfhaskjhfkjadshfkadshfkjhsdkfhadskjfhadslf
-						adsfadskfkjadshfkhadkfhdklfjadskjf
-						adsfjkladsjfladsjf
-						asjklfjaslfj alsdjsonasa sdasdasdasdasf jahfkjadhd kjashfkjaasdas dasdasdadah</p>
-			</div>
-		</li>
-		<li>
-			<div class="wrapper">
-				<img src="{{asset('/img/bg1.jpg')}}" width="350px" height="350px"/>
-				<span class="close" data-toggle="modal" data-target="#eliminar"></span>
-		  </div>
-		  <div class="wrapper">
-		    	<span class="edit" data-toggle="modal" data-target="#editar"></span>
-			    <p class="titulo">Esta es una noticia</p>
-			    <p class="parrafo">Aqui vemos que en rancho el milagro ayudamos a todo tipo de perms aklfakfnkadshcfkmadg bfjagfkjadshkfjha skjfhaskjhfkjadshfkadshfkjhsdkfhadskjfhadslf
-						adsfadskfkjadshfkhadkfhdklfjadskjf
-						adsfjkladsjfladsjf
-						asjklfjaslfj alsdjsonasa sdasdasdasdasf jahfkjadhd kjashfkjaasdas dasdasdadah</p>
-			</div>
-		</li>
-		<li>
-			<div class="wrapper">
-				<img src="{{asset('/img/bg1.jpg')}}" width="350px" height="350px"/>
-				<span class="close" data-toggle="modal" data-target="#eliminar"></span>
-		  </div>
-		  <div class="wrapper">
-		    	<span class="edit" data-toggle="modal" data-target="#editar"></span>
-			    <p class="titulo">Esta es una noticia</p>
-			    <p class="parrafo">Aqui vemos que en rancho el milagro ayudamos a todo tipo de perms aklfakfnkadshcfkmadg bfjagfkjadshkfjha skjfhaskjhfkjadshfkadshfkjhsdkfhadskjfhadslf
-						adsfadskfkjadshfkhadkfhdklfjadskjf
-						adsfjkladsjfladsjf
-						asjklfjaslfj alsdjsonasa sdasdasdasdasf jahfkjadhd kjashfkjaasdas dasdasdadah</p>
-			</div>
-		</li>
-		<li>
-			<div class="wrapper">
-				<img src="{{asset('/img/bg1.jpg')}}" width="350px" height="350px"/>
-				<span class="close" data-toggle="modal" data-target="#eliminar"></span>
-		  </div>
-		  <div class="wrapper">
-		    	<span class="edit" data-toggle="modal" data-target="#editar"></span>
-			    <p class="titulo">Esta es una noticia</p>
-			    <p class="parrafo">Aqui vemos que en rancho el milagro ayudamos a todo tipo de perms aklfakfnkadshcfkmadg bfjagfkjadshkfjha skjfhaskjhfkjadshfkadshfkjhsdkfhadskjfhadslf
-						adsfadskfkjadshfkhadkfhdklfjadskjf
-						adsfjkladsjfladsjf
-						asjklfjaslfj alsdjsonasa sdasdasdasdasf jahfkjadhd kjashfkjaasdas dasdasdadah</p>
-			</div>
-		</li>
-		<li>
-			<div class="wrapper">
-				<img src="{{asset('/img/bg1.jpg')}}" width="350px" height="350px"/>
-				<span class="close" data-toggle="modal" data-target="#eliminar"></span>
-		  </div>
-		  <div class="wrapper">
-		    	<span class="edit" data-toggle="modal" data-target="#editar"></span>
-			    <p class="titulo">Esta es una noticia</p>
-			    <p class="parrafo">Aqui vemos que en rancho el milagro ayudamos a todo tipo de perms aklfakfnkadshcfkmadg bfjagfkjadshkfjha skjfhaskjhfkjadshfkadshfkjhsdkfhadskjfhadslf
-						adsfadskfkjadshfkhadkfhdklfjadskjf
-						adsfjkladsjfladsjf
-						asjklfjaslfj alsdjsonasa sdasdasdasdasf jahfkjadhd kjashfkjaasdas dasdasdadah</p>
-			</div>
-		</li>
+
 		<li>
 			<a href="#">
 				<div class="agregar" data-toggle="modal" data-target="#Agregar">
@@ -239,9 +154,10 @@
 </div>
 
 <div class="modal fade" id="Agregar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+			{{Form::open( array('url'=>'/admin/','files'=>true)) }}
     <div class="vertical-alignment-helper">
         <div class="modal-dialog vertical-align-center">
-						{{Form::open( array('url'=>'/admin/','files'=>true)) }}
 						<div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Cancelar</span>
@@ -249,8 +165,7 @@
                      <h4 class="modal-title" id="myModalLabel">Agregar</h4>
                 </div>
                 <div class="modal-body">
-
-										{{Form::text('Titulo','',array('style'=>'border: none;border-bottom: .3px solid #a8a8a8; width: 100%; outline: none; height: 50px; font-size: 2rem;','placeholder'=>'Titulo de noticia'))}}
+										{{Form::text('Titulo','',array('style'=>'border: none;border-bottom: .3px solid #a8a8a8; width: 100%; outline: none; height: 50px; font-size: 2rem;','placeholder'=>'Titulo de la noticia'))}}
 										{{Form::text('Descripcion','',array('style'=>'border: none;border-bottom: .3px solid #a8a8a8; width: 100%; outline: none; height: 50px; font-size: 2rem;','placeholder'=>'Descripcion de noticia'))}}
 										{{Form::textarea('Noticia','',array('style'=>'font-family: Raleway;font-size: 12pt;width:100%;height:50vh; resize: none;','placeholder'=>'Noticia'))}}
 
