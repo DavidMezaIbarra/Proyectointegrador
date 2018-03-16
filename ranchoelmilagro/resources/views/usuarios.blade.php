@@ -1,25 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="{{asset('css/bootstrap.css')}}" rel="stylesheet">
-	<link rel="stylesheet" href="{{asset('/css/estilos.css')}}">
-	<link rel="stylesheet" href="{{asset('/css/adminpanel.css')}}">
-	<link rel="stylesheet" href="{{asset('/css/perfil.css')}}">
-	<meta charset="UTF-8">
-	<title>Panel de Administración</title>
-</head>
-<body>
+
+
+@extends('layouts.layout')
+
+@section('content')
 	<div>
 		<header>
 			<div  class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
 			  <ul class="nav navbar-nav">
 			    <li><img src="{{asset('/img/logo.png')}}" class="img-responsive" alt="Responsive image" style="margin-top: 2%;"></li>
-			    <li style="margin-left:-50px;"><a href="/" style="color: white;">Inicio</a></li>
+			    <li style="margin-left:600px;"><a href="/" style="color: white;">Inicio</a></li>
 					<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
-									{{ Auth::user()->name }} <span class="caret" style="color:white;"></span>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" style="color:white">
+									{{ Auth::user()->email }} <span class="caret" style="color:white;"></span>
 							</a>
 							<ul class="dropdown-menu">
 									<li>
@@ -47,7 +39,7 @@
 
 		<div class=" col-md-12" style="background-color:#263238;height:100vh;">
 			<div class=" col-md-12" style="margin-top: 50px;background-color: white;height: auto;">
-			    <h1 style="text-align:center;"><strong>Bienvenido</strong> "Nombre de la persona"</h1>
+			    <h1 style="text-align:center;"><strong>Bienvenido</strong> {{ Auth::user()->email }}</h1>
 					<p style="font-weight:600;font-size:2rem">Agregar Usuario</p>
 					<div class="input-group col-md-12 col-md-offset-0">
 						@if($errors->any())
@@ -81,7 +73,9 @@
 									<tr>
 										<td>{{$usu->id}}</td>
 										<td>{{$usu->email}}</td>
-										<td></td>
+										<td>
+											<button type="button" class="btn btn-primary " data-toggle="modal" data-target="#editar" >Editar</button>
+										</td>
 										<td>
 											{!! Form::open( array('route'=>['admin.usuarios.destroy',$usu->id],'method'=>'delete')) !!}
 											<button type="submit" class="btn btn-primary" style="width:70px;height:30px;border-radius:10px;">
@@ -122,18 +116,48 @@
 								</li>
 						</ul>
 
+
 					{{Form::close()}}
+					<div class="modal fade" id="editar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					    <div class="vertical-alignment-helper">
+					        <div class="modal-dialog vertical-align-center">
+					            <div class="modal-content">
+					                <div class="modal-header">
+					                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Cancelar</span>
+					                    </button>
+					                     <h4 class="modal-title" id="myModalLabel">Editar</h4>
+					                </div>
+											{!! Form::open( array('route'=>['admin.usuarios.destroy',$usu->id],'method'=>'delete')) !!}
+					                <div class="modal-body">
+														<div class="input-group">
+															<label for="">Nombre</label>
+															<input type="text" name="nameEditar" id="nameEditar" value="" class="form-control">
+														</div>
+														<div class="input-group">
+															<label for="">contraseña anterior</label>
+															<input type="password" name="pass1Editar" id="pass1Editar" value="" class="form-control">
+														</div>
+														<div class="input-group">
+															<label for="">contraseña nueva</label>
+															<input type="password" name="pass2Editar" id="pass3Editar" value="" class="form-control">
+														</div>
 
-
+					                </div>
+					                <div class="modal-footer">
+					                    <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+					                    <button type="submit" class="btn btn-danger">Editar</button>
+					                </div>
+													{{Form::close()}}
+					            </div>
+					        </div>
+					    </div>
+					</div>
+  		</div>
+  	</div>
   </div>
-  </div>
-  </div>
+	@endsection
 	<!-- Boton de subir archivos -->
 
-	</script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="{{asset('js/bootstrap.min.js')}}"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script type="text/javascript" src="{{('/js/adminpanel.js')}}"></script>
-</body>
-</html>
+@section('scripts')
+	
+@endsection
