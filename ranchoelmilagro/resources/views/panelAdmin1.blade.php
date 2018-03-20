@@ -47,6 +47,7 @@
 		</div>
 	</header>
 <div class="container col-md-12" style="background-color:#263238;">
+
 	<div class="container col-md-12" style="margin-top: 50px;background-color: white;height: auto;">
 		<div class="input-group col-md-12 col-md-offset-0">
 			@if($errors->any())
@@ -73,54 +74,74 @@
 			<p class="parrafo" style="text-align:center;font-size:2rem;">Aqui podrá editar las noticias que aparecen en la pantalla principal </p>
 
 		</div>
-		<div class="container col-md-12" style="margin-left:5%;">
-@forelse($noticias as $reg)
+		@forelse($noticias as $reg)
+		<div class="container col-md-4" style="margin-left:0%;">
+
 			<li>
 		<div style="background-color:#eff3f7;width:360px;border-radius:10px;">
 			<div class="wrapper" style="margin-left:5px;margin-top:5px;">
 				<img src="{{asset('/img/noticias/'.$reg->Imagen)}}" width="350px" height="350px" style="background-size:all;border-radius:10px;"/>
-				<span class="close" data-toggle="modal" data-target="#eliminar"></span>
+
+					<span class="close btnEdit" data-toggle="modal" data-target=".eliminar{{$reg->id_noticia}}"></span>
+					<!-- Modal eliminar -->
+					<div class="modal fade eliminar{{$reg->id_noticia}}" id="" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					    <div class="vertical-alignment-helper">
+					        <div class="modal-dialog vertical-align-center">
+					            <div class="modal-content">
+					                <div class="modal-header">
+					                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Cancelar</span>
+					                    </button>
+					                     <h4 class="modal-title2" id="myModalLabel2">Eliminar</h4>
+					                </div>
+					                <div class="modal-body">Seguro que quiere eliminar?</div>
+					                <div class="modal-footer">
+					                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+															{!! Form::open( array('route'=>['admin.panelWebController.destroy',$reg->id_noticia],'method'=>'delete')) !!}
+															<input type="hidden" name="iddelete" id="iddelete" value="hola">
+															<button type="submit" class="btn btn-primary btndelete">Eliminar</button>
+															{!! Form::close() !!}
+					                </div>
+					            </div>
+					        </div>
+					    </div>
+					</div>
+
 		  </div>
 		  <div class="wrapper" style="height:120px;">
-		    	<span class="edit" data-toggle="modal" data-target="#editar"></span>
+		    	<span class="edit btnEdit" data-toggle="modal" data-target="#editar"
+					data-id="{{$reg->id_noticia}}"
+					data-titulo="{{$reg->Titulo_noticia}}"
+					data-descripcion="{{$reg->Descripcion_noticia}}"
+					data-noticia="{{$reg->Noticia}}"></span>
 			    <p class="titulo">{{$reg->Titulo_noticia}}</p>
 			    <p class="parrafo" style="">{{$reg->Descripcion_noticia}}</p>
 			</div>
-			@empty
-				<p>Sin registros</p>
-			@endforelse
+
 			</div>
 		</li>
+		</div>
 
+		@empty
+			<p>Sin registros</p>
+			<li>
+				<a href="#">
+					<div class="agregar" data-toggle="modal" data-target="#Agregar">
+						<i class="glyphicon glyphicon-plus"></i>
+					</div>
+				</a>
+			</li>
+		@endforelse
 		<li>
 			<a href="#">
-				<div class="agregar" data-toggle="modal" data-target="#Agregar">
+				<div class="agregar" data-toggle="modal" data-target="#Agregar" style="margin-left:4%;">
 					<i class="glyphicon glyphicon-plus"></i>
 				</div>
 			</a>
 		</li>
-		</div>
-	</div>
-</div>
-<!-- Modal eliminar -->
-<div class="modal fade" id="eliminar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="vertical-alignment-helper">
-        <div class="modal-dialog vertical-align-center">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Cancelar</span>
-                    </button>
-                     <h4 class="modal-title" id="myModalLabel">Eliminar</h4>
-                </div>
-                <div class="modal-body">Seguro que quiere eliminar?</div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Eliminar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+	</div><!--div blanco-->
+</div><!--div gris-->
+
+
 <!-- Modal editar -->
 <div class="modal fade" id="editar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="vertical-alignment-helper">
@@ -129,24 +150,27 @@
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Cancelar</span>
                     </button>
-                     <h4 class="modal-title" id="myModalLabel">Editar</h4>
+                     <h4 class="modal-title" id="myModalLabel" style="font-weight:1000;font-size:3rem;">Editar</h4>
                 </div>
                 <div class="modal-body">
-          {{Form::open( array('url'=>'/admin/','files'=>true)) }}
-						{{Form::text('Titulo','',array('style'=>'border: none;border-bottom: .3px solid #a8a8a8; width: 100%; outline: none; height: 50px; font-size: 2rem;','placeholder'=>'Titulo de noticia'))}}
-						{{Form::text('Descripcion','',array('style'=>'border: none;border-bottom: .3px solid #a8a8a8; width: 100%; outline: none; height: 50px; font-size: 2rem;','placeholder'=>'Descripcion de noticia'))}}
-						{{Form::textarea('Noticia','',array('style'=>'font-family: Raleway;font-size: 12pt;width:100%;height:50vh; resize: none;','placeholder'=>'Titulo de noticia'))}}
-					{{Form::close()}}
-					<input id="uploadFile" placeholder="Archivo Elegido" disabled="disabled" />
+          {!! Form::open( array('route'=>['admin.panelWebController.edit',$reg->id_noticia],'method'=>'GET')) !!}
+					<input type="hidden" name="id_noticia" id="idEditar" value="">
+					<input type="text" name="tituloeditar" id="tituloeditar" value=""  style="border: none;border-bottom: .3px solid #a8a8a8; width: 100%; outline: none; height: 50px; font-size: 2rem;" placeholder="">
+					<input type="text" name="descripcioneditar" id="descripcioneditar" value=""  style="border: none;border-bottom: .3px solid #a8a8a8; width: 100%; outline: none; height: 50px; font-size: 2rem;" placeholder="">
+					<textarea name="noticiaeditar" id="noticiaeditar" value=""  style="font-family: Raleway;font-size: 2rem;width:100%;height:50vh; resize: none;" placeholder=""></textarea>
+
+					<input id="uploadFile" name="uploadFile" placeholder="Archivo Elegido" disabled="disabled" />
 					<div class="fileUpload btn btn-primary">
 					    <span>Subir Archivo</span>
-					    <input id="uploadBtn" type="file" class="upload" />
+					    <input id="uploadBtn" name="uploadBtn" type="file" class="upload" />
 					</div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Editar</button>
+                    <button type="submit" class="btn btn-primary">Editar</button>
                 </div>
+
+								{{Form::close()}}
 
             </div>
         </div>
@@ -191,8 +215,43 @@
     document.getElementById("uploadFile").value = this.value;
 	};
 </script>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="{{asset('/js/bootstrap.min.js')}}"></script>
 <script src="{{asset('/js/nav.js')}}"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$(".btnEdit").on('click',function(){
+		var n=$(this).data('tituloeditar');
+		var p=$(this).data('descripcioneditar');
+		var pp=$(this).data('noticiaeditar');
+		var i=$(this).data('id');
+		var im=$(this).data('uploadBtn');
+
+		$("#uploadBtn").val(im);
+		$("#tituloeditar").val(n);
+		$("#idEditar").val(i);
+		$("#descripcioneditar").val(p);
+		$("#noticiaeditar").val(pp);
+	});
+	$('.btnEdit').on('click',function(event){
+		var rutat=$(this).attr('data-titulo');
+		document.getElementById("tituloeditar").value = rutat;
+			$('.modal-title').text("Editando: "+ rutat);
+
+		var rutad=$(this).attr('data-descripcion');
+		document.getElementById("descripcioneditar").value = rutad;
+
+		var rutan=$(this).attr('data-noticia');
+		document.getElementById("noticiaeditar").value = rutan;
+	});
+	$('.btndelete').on('click',function(event){
+			var i=$(this).data('id');
+			$("#iddelete").val(i);
+
+
+		});
+});
+</script>
 </body>
 </html>

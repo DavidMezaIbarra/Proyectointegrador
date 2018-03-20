@@ -30,6 +30,7 @@ Route::group(['prefix'=>'admin','as'=>'admin.'],function(){
  Route::get('/login','loginController@index');
  Route::get('/loginapp','loginappController@indexapp');
 
+
  Route::get('/usuarios','usuariosController@index');
 
  Route::resource('panelWebController','panelwebController');

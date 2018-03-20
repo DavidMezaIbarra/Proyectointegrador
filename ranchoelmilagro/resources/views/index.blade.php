@@ -95,7 +95,7 @@
 				<div class="modalclic" style="width:360px;border-radius:10px;"  data-text="{{$reg->Noticia}}">
 					<div class="wrapper" style="margin-left:5px;">
 						<a href="#s6">
-							<div class="agregar " data-toggle="modal" data-target="#editar">
+							<div class="agregar" data-toggle="modal" data-target="#editar">
 								<img src="{{asset('/img/noticias/'.$reg->Imagen)}}" width="350px" height="350px" style="background-size:cover;border-radius:10px;"/>
 							</div>
 						</a>
@@ -106,6 +106,30 @@
 					    <p id="1" class="titulo">{{$reg->Titulo_noticia}}</p>
 					    <h2 id="2" class="parrafo" style="">{{$reg->Descripcion_noticia}}</h2>
 					</div>
+					<div class="modal fade" id="editar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					    <div class="vertical-alignment-helper">
+					        <div class="modal-dialog vertical-align-center">
+					            <div class="">
+					                <div class="modal-header" style="border:none;margin-bottom:-5%;">
+					                    <button type="button" class="close" data-dismiss="modal" style="color:white;"><span aria-hidden="true"style="color:white;font-size:2rem;">X</span><span class="sr-only" style="color:white;">Cancelar</span>
+					                    </button>
+					                     <h4 class="modal-title" id="titlemodal" style="color:white;">{{$reg->Titulo_noticia}}</h4>
+					                </div>
+					                <div class="modal-body">
+														<img id="imagenmodal"src="{{asset('/img/noticias/'.$reg->Imagen)}}" style="display:block;margin:auto;background-color:white;max-width:100%;max-height:100%;">
+
+													</div>
+					                <div class="modal-footer" style="background-color:white;">
+														<div class="parrafo" id="bodylabel"style="color:#525963;font-family:raleway;">
+																{{$reg->Noticia}}
+														</div>
+					                </div>
+					            </div>
+					        </div>
+					    </div>
+					</div>
+
+
 					@empty
 						<p>Sin registros</p>
 					@endforelse
@@ -117,28 +141,7 @@
 				</li>
 	</ul>
 
-	<div class="modal fade" id="editar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	    <div class="vertical-alignment-helper">
-	        <div class="modal-dialog vertical-align-center">
-	            <div class="">
-	                <div class="modal-header" style="border:none;margin-bottom:-5%;">
-	                    <button type="button" class="close" data-dismiss="modal" style="color:white;"><span aria-hidden="true"style="color:white;font-size:2rem;">X</span><span class="sr-only" style="color:white;">Cancelar</span>
-	                    </button>
-	                     <h4 class="modal-title" id="titlemodal" style="color:white;">{{$reg->Titulo_noticia}}</h4>
-	                </div>
-	                <div class="modal-body">
-										<img id="imagenmodal"src="{{asset('/img/noticias/'.$reg->Imagen)}}" style="display:block;margin:auto;background-color:white;max-width:100%;max-height:100%;">
 
-									</div>
-	                <div class="modal-footer" style="background-color:white;">
-										<div class="parrafo" id="bodylabel"style="color:#525963;font-family:raleway;">
-												{{$reg->Noticia}}
-										</div>
-	                </div>
-	            </div>
-	        </div>
-	    </div>
-	</div>
 </section>
 
 	<section id="s7" style="padding-top: 100px;background-color:#eff3f9;height:300px;">

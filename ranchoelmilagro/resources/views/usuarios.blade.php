@@ -6,12 +6,13 @@
 	<div>
 		<header>
 			<div  class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
+
 			  <ul class="nav navbar-nav">
 			    <li><img src="{{asset('/img/logo.png')}}" class="img-responsive" alt="Responsive image" style="margin-top: 2%;"></li>
 			    <li style="margin-left:600px;"><a href="/" style="color: white;">Inicio</a></li>
 					<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" style="color:white">
-									{{ Auth::user()->email }} <span class="caret" style="color:white;"></span>
+								{{ Auth::user()->email }} <span class="caret" style="color:white;"></span>
 							</a>
 							<ul class="dropdown-menu">
 									<li>
@@ -74,15 +75,21 @@
 										<td>{{$usu->id}}</td>
 										<td>{{$usu->email}}</td>
 										<td>
-											<button type="button" class="btn btn-primary " data-toggle="modal" data-target="#editar" >Editar</button>
+											<button type="button" class="btn btn-primary btnEdit " data-toggle="modal" data-target="#editar"
+											 data-nombre="{{$usu->email}}"
+											 data-id="{{$usu->id}}"
+											  >Editar</button>
 										</td>
 										<td>
-											{!! Form::open( array('route'=>['admin.usuarios.destroy',$usu->id],'method'=>'delete')) !!}
-											<button type="submit" class="btn btn-primary" style="width:70px;height:30px;border-radius:10px;">
+
+											<button type="submit" class="btn btn-danger" style="width:70px;height:30px;border-radius:10px;"
+											data-idd="{{$usu->id}}"
+											data-named="{{$usu->email}}"
+											data-toggle="modal" data-target="#eliminar">
 												<i class="glyphicon glyphicon-trash" style="font-size:12px;margin:0px;color:white"></i>
 											</button>
 
-											{!! Form::close() !!}
+
 										</td>
 									</tr>
 									@empty
@@ -118,6 +125,30 @@
 
 
 					{{Form::close()}}
+					<!--modal eliminar-->
+					<div class="modal fade" id="eliminar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					    <div class="vertical-alignment-helper">
+					        <div class="modal-dialog vertical-align-center">
+					            <div class="modal-content">
+					                <div class="modal-header">
+					                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Cancelar</span>
+					                    </button>
+					                     <h4 class="modal-title" id="myModalLabel">Eliminar</h4>
+					                </div>
+					                <div class="modal-body">Seguro que quiere eliminar?</div>
+					                <div class="modal-footer">
+					                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+															{!! Form::open( array('route'=>['admin.usuarios.destroy',$usu->id],'method'=>'delete')) !!}
+														  <button type="submit" class="btn btn-primary">Eliminar</button>
+															{!! Form::close() !!}
+					                </div>
+					            </div>
+					        </div>
+					    </div>
+					</div>
+
+
 					<div class="modal fade" id="editar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 					    <div class="vertical-alignment-helper">
 					        <div class="modal-dialog vertical-align-center">
@@ -125,19 +156,21 @@
 					                <div class="modal-header">
 					                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Cancelar</span>
 					                    </button>
-					                     <h4 class="modal-title" id="myModalLabel">Editar</h4>
+					                     <h4 class="modal-title" id="myModalLabel">Editando a <span id="titlename">{{$usu->email}}</span></h4>
 					                </div>
-											{!! Form::open( array('route'=>['admin.usuarios.destroy',$usu->id],'method'=>'delete')) !!}
+											{!! Form::open( array('route'=>['admin.usuarios.edit',$usu->id],'method'=>'GET')) !!}
 					                <div class="modal-body">
-														<div class="input-group">
+														<input type="hidden" name="id" id="idEditar" value="">
+														<div class="">
 															<label for="">Nombre</label>
 															<input type="text" name="nameEditar" id="nameEditar" value="" class="form-control">
+
 														</div>
-														<div class="input-group">
+														<div class="">
 															<label for="">contraseña anterior</label>
-															<input type="password" name="pass1Editar" id="pass1Editar" value="" class="form-control">
+															<input type="password" name="pass1Editar" id="pass1Editar" value="" class="form-control" style="width:100%">
 														</div>
-														<div class="input-group">
+														<div class="">
 															<label for="">contraseña nueva</label>
 															<input type="password" name="pass2Editar" id="pass3Editar" value="" class="form-control">
 														</div>
@@ -159,5 +192,27 @@
 	<!-- Boton de subir archivos -->
 
 @section('scripts')
-	
+<script type="text/javascript">
+$(document).ready(function(){
+	$(".btnEdit").on('click',function(){
+		var n=$(this).data('nameEditar');
+		var p=$(this).data('pass1Editar');
+		var pp=$(this).data('pass2Editar');
+		var i=$(this).data('id');
+
+
+		$("#nameEditar").val(n);
+		$("#idEditar").val(i);
+		$("#pass1Editar").val(p);
+		$("#pass2Editar").val(pp);
+		$("#nommodal").text(n);
+	});
+	$('.btnEdit').on('click',function(event){
+		var rutan=$(this).attr('data-nombre');
+		$('#nameEditar').attr('placeholder',rutan);
+		$('#titlename').text(rutan);
+	});
+});
+</script>
+
 @endsection

@@ -43,12 +43,21 @@ class usuariosController extends Controller
     }//function validator
     public function destroy($id){
       $usuario=User::find($id);
-      /*para eliminar imagen
+      /*para eliminar imagen*/
       if(file_exists(public_path('/img/noticia/'.$usuario->imagen))){
         unlink(public_path('img/noticias/'.$usuario->imagen));
-    }*/
+    }
     $usuario->delete();
     return redirect('/admin/usuarios');
 
     }//function destroy
+    public function edit(Request $req){
+      $usuario=User::find($req->id);
+      $usuario->email=$req->nameEditar;
+      $usuario->password=bcrypt($req->pass2Editar);
+      $usuario->save();
+      return redirect()->to('/admin')
+      ->with('mensaje','Actualizado');
+
+    }//function edit
 }

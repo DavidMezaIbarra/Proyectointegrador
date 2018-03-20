@@ -32,7 +32,7 @@ class panelwebController extends Controller
         'Noticia'=>'required|max:255',
         'Titulo'=>'required|max:255',
         'Descripcion'=>'required|max:255'
-      ]);
+      ]);//validator
       if($validator->fails()){
         //quiere decir que no esta correcto
         return redirect('/admin')
@@ -46,12 +46,37 @@ class panelwebController extends Controller
           'Noticia'=>$req->Noticia,
           'Titulo_noticia'=>$req->Titulo,
           'Descripcion_noticia'=>$req->Descripcion ,
-          'Imagen'=>$nombreImg
-
+          'Imagen'=>$nombreImg,
+          'id_noticia'=>$req->id_noticia
         ]);
         return redirect('/admin')
         ->with('mensaje','usuario agregado');
-      }
-      dd($req->nombre);
+      }//else
+    }//store
+    public function edit(Request $req){
+      $nombreImg=time().'.'.$req->uploadBtn;
+      $noticias=noticia::find($req->id_noticia);
+      $noticias->Imagen=$nombreImg;
+      $noticias->Noticia=$req->noticiaeditar;
+      $noticias->Titulo_noticia=$req->tituloeditar;
+      $noticias->Id_usuario=Auth::user()->id;
+      $noticias->Descripcion_noticia=$req->descripcioneditar;
+      $noticias->save();
+      return redirect()->to('/admin')
+      ->with('mensaje','Actualizado');
+    }//function edit
+
+
+    public function destroy($id_noticia){
+      $noticias=noticia::find($id_noticia);
+      //dd($noticias=noticia::find($id_noticia));
+      /*para eliminar imagen*/
+      if(file_exists(public_path('/img/noticia/'.$noticias->imagen))){
+        unlink(public_path('img/noticias/'.$noticias->imagen));
     }
+    $noticias->delete();
+    return redirect('/admin');
+
+    }//function destroy
+
 }
