@@ -13,7 +13,6 @@
                     <form class="form-horizontal" method="POST" action="{{ route('login') }}">
                       <h1 style="color:white; text-align:center">Inicio de Sesión</h1><br>
                         {{ csrf_field() }}
-
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                             <label for="email" class="col-md-12 col-md-offset-2 col-sm-12 col-sm-offset-3 col-xs-12 col-xs-offset-3" style="color:white;">Nombre de Usuario</label><br>
 

@@ -41,8 +41,8 @@
 		<div class=" col-md-12" style="background-color:#263238;height:100vh;">
 			<div class=" col-md-12" style="margin-top: 50px;background-color: white;height: auto;">
 			    <h1 style="text-align:center;"><strong>Bienvenido</strong> {{ Auth::user()->email }}</h1>
-					<p style="font-weight:600;font-size:2rem">Agregar Usuario</p>
-					<div class="input-group col-md-12 col-md-offset-0">
+
+					<div class="input-group col-md-10 col-sm-10 col-sm-offset-1 col-md-offset-1">
 						@if($errors->any())
 							<div class="alert alert-warning alert-dismissible fade in">
 			  				<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
@@ -85,19 +85,49 @@
 											<button type="submit" class="btn btn-danger" style="width:70px;height:30px;border-radius:10px;"
 											data-idd="{{$usu->id}}"
 											data-named="{{$usu->email}}"
-											data-toggle="modal" data-target="#eliminar">
+											data-toggle="modal" data-target="#eliminar{{$usu->id}}">
 												<i class="glyphicon glyphicon-trash" style="font-size:12px;margin:0px;color:white"></i>
 											</button>
 
 
 										</td>
 									</tr>
+
+
+									<div class="modal fade" id="eliminar{{$usu->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+											<div class="vertical-alignment-helper">
+													<div class="modal-dialog vertical-align-center">
+															<div class="modal-content">
+																	<div class="modal-header">
+																			<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Cancelar</span>
+																			</button>
+																			 <h4 class="modal-title" id="myModalLabel">Eliminar</h4>
+																	</div>
+																	<div class="modal-body">Seguro que quiere eliminar?</div>
+																	<div class="modal-footer">
+																			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+																			{!! Form::open( array('route'=>['admin.usuarios.destroy',$usu->id],'method'=>'delete')) !!}
+																			<button type="submit" class="btn btn-primary">Eliminar</button>
+																			{!! Form::close() !!}
+																	</div>
+															</div>
+													</div>
+											</div>
+									</div>
+
+
+
+
+
 									@empty
 										<p>Sin registros</p>
 									@endforelse
 								</tbody>
 							</table>
 						</div>
+
+							<p style="font-weight:600;font-size:2rem">Agregar Usuario</p>
 					{{Form::open( array('url'=>'/admin/usuarios','files'=>true)) }}
 					</div>
 						<ul class="form-style-1">
@@ -126,27 +156,7 @@
 
 					{{Form::close()}}
 					<!--modal eliminar-->
-					<div class="modal fade" id="eliminar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-					    <div class="vertical-alignment-helper">
-					        <div class="modal-dialog vertical-align-center">
-					            <div class="modal-content">
-					                <div class="modal-header">
-					                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Cancelar</span>
-					                    </button>
-					                     <h4 class="modal-title" id="myModalLabel">Eliminar</h4>
-					                </div>
-					                <div class="modal-body">Seguro que quiere eliminar?</div>
-					                <div class="modal-footer">
-					                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 
-															{!! Form::open( array('route'=>['admin.usuarios.destroy',$usu->id],'method'=>'delete')) !!}
-														  <button type="submit" class="btn btn-primary">Eliminar</button>
-															{!! Form::close() !!}
-					                </div>
-					            </div>
-					        </div>
-					    </div>
-					</div>
 
 
 					<div class="modal fade" id="editar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

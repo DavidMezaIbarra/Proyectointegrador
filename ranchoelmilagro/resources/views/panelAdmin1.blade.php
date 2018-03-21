@@ -74,6 +74,13 @@
 			<p class="parrafo" style="text-align:center;font-size:2rem;">Aqui podrá editar las noticias que aparecen en la pantalla principal </p>
 
 		</div>
+		<li>
+			<a href="#">
+				<div class="agregar" data-toggle="modal" data-target="#Agregar" style="margin-left:5%; width:360px; height:470px;">
+					<i class="glyphicon glyphicon-plus"></i>
+				</div>
+			</a>
+		</li>
 		@forelse($noticias as $reg)
 		<div class="container col-md-4" style="margin-left:0%;">
 
@@ -95,8 +102,9 @@
 					                </div>
 					                <div class="modal-body">Seguro que quiere eliminar?</div>
 					                <div class="modal-footer">
+														{!! Form::open( array('route'=>['admin.panelWebController.destroy',$reg->id_noticia],'method'=>'delete')) !!}
+
 					                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-															{!! Form::open( array('route'=>['admin.panelWebController.destroy',$reg->id_noticia],'method'=>'delete')) !!}
 															<input type="hidden" name="iddelete" id="iddelete" value="hola">
 															<button type="submit" class="btn btn-primary btndelete">Eliminar</button>
 															{!! Form::close() !!}
@@ -118,7 +126,74 @@
 			</div>
 
 			</div>
+
 		</li>
+
+		</div>
+		<div class="modal fade" id="editar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		    <div class="vertical-alignment-helper">
+		        <div class="modal-dialog vertical-align-center">
+		            <div class="modal-content">
+		                <div class="modal-header">
+		                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Cancelar</span>
+		                    </button>
+		                     <h4 class="modal-title" id="myModalLabel" style="font-weight:1000;font-size:3rem;">Editar</h4>
+		                </div>
+		                <div class="modal-body">
+		          {!! Form::open( array('route'=>['admin.panelWebController.edit',$reg->id_noticia],'method'=>'GET')) !!}
+							<input type="hidden" name="id_noticia" id="idEditar" value="">
+							<input type="text" name="tituloeditar" id="tituloeditar" value=""  style="border: none;border-bottom: .3px solid #a8a8a8; width: 100%; outline: none; height: 50px; font-size: 2rem;" placeholder="">
+							<input type="text" name="descripcioneditar" id="descripcioneditar" value=""  style="border: none;border-bottom: .3px solid #a8a8a8; width: 100%; outline: none; height: 50px; font-size: 2rem;" placeholder="">
+							<textarea name="noticiaeditar" id="noticiaeditar" value=""  style="font-family: Raleway;font-size: 2rem;width:100%;height:50vh; resize: none;" placeholder=""></textarea>
+
+							<input id="uploadFile" name="uploadFile" placeholder="Archivo Elegido" disabled="disabled" />
+							<div class="fileUpload btn btn-primary">
+							    <span>Subir Archivo</span>
+							    <input id="uploadBtn" name="uploadBtn" type="file" class="upload" />
+							</div>
+		                </div>
+		                <div class="modal-footer">
+		                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		                    <button type="submit" class="btn btn-primary">Editar</button>
+		                </div>
+
+										{{Form::close()}}
+
+		            </div>
+		        </div>
+		    </div>
+		</div>
+
+		<div class="modal fade" id="Agregar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+					{{Form::open( array('url'=>'/admin/','files'=>true)) }}
+		    <div class="vertical-alignment-helper">
+		        <div class="modal-dialog vertical-align-center">
+								<div class="modal-content">
+		                <div class="modal-header">
+		                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Cancelar</span>
+		                    </button>
+		                     <h4 class="modal-title" id="myModalLabel">Agregar</h4>
+		                </div>
+		                <div class="modal-body">
+												{{Form::text('Titulo','',array('style'=>'border: none;border-bottom: .3px solid #a8a8a8; width: 100%; outline: none; height: 50px; font-size: 2rem;','placeholder'=>'Titulo de la noticia'))}}
+												{{Form::text('Descripcion','',array('style'=>'border: none;border-bottom: .3px solid #a8a8a8; width: 100%; outline: none; height: 50px; font-size: 2rem;','placeholder'=>'Descripcion de noticia'))}}
+												{{Form::textarea('Noticia','',array('style'=>'font-family: Raleway;font-size: 12pt;width:100%;height:50vh; resize: none;','placeholder'=>'Noticia'))}}
+
+							<input id="uploadFile" placeholder="Archivo Elegido" disabled="disabled" />
+							<div class="fileUpload btn btn-primary">
+							    <span>Subir Archivo</span>
+							    <input id="uploadBtn" type="file" class="upload" name="Imagen" />
+							</div>
+		                </div>
+		                <div class="modal-footer">
+		                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+												{{Form::submit('Agregar',array('class'=>'btn btn-primary'))}}
+		                </div>
+		            </div>
+								{{Form::close()}}
+		        </div>
+		    </div>
 		</div>
 
 		@empty
@@ -130,84 +205,45 @@
 					</div>
 				</a>
 			</li>
+
+			<div class="modal fade" id="Agregar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+						{{Form::open( array('url'=>'/admin/','files'=>true)) }}
+			    <div class="vertical-alignment-helper">
+			        <div class="modal-dialog vertical-align-center">
+									<div class="modal-content">
+			                <div class="modal-header">
+			                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Cancelar</span>
+			                    </button>
+			                     <h4 class="modal-title" id="myModalLabel">Agregar</h4>
+			                </div>
+			                <div class="modal-body">
+													{{Form::text('Titulo','',array('style'=>'border: none;border-bottom: .3px solid #a8a8a8; width: 100%; outline: none; height: 50px; font-size: 2rem;','placeholder'=>'Titulo de la noticia'))}}
+													{{Form::text('Descripcion','',array('style'=>'border: none;border-bottom: .3px solid #a8a8a8; width: 100%; outline: none; height: 50px; font-size: 2rem;','placeholder'=>'Descripcion de noticia'))}}
+													{{Form::textarea('Noticia','',array('style'=>'font-family: Raleway;font-size: 12pt;width:100%;height:50vh; resize: none;','placeholder'=>'Noticia'))}}
+
+								<input id="uploadFile" placeholder="Archivo Elegido" disabled="disabled" />
+								<div class="fileUpload btn btn-primary">
+								    <span>Subir Archivo</span>
+								    <input id="uploadBtn" type="file" class="upload" name="Imagen" />
+								</div>
+			                </div>
+			                <div class="modal-footer">
+			                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+													{{Form::submit('Agregar',array('class'=>'btn btn-primary'))}}
+			                </div>
+			            </div>
+									{{Form::close()}}
+			        </div>
+			    </div>
+			</div>
 		@endforelse
-		<li>
-			<a href="#">
-				<div class="agregar" data-toggle="modal" data-target="#Agregar" style="margin-left:4%;">
-					<i class="glyphicon glyphicon-plus"></i>
-				</div>
-			</a>
-		</li>
+
 	</div><!--div blanco-->
 </div><!--div gris-->
 
 
 <!-- Modal editar -->
-<div class="modal fade" id="editar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="vertical-alignment-helper">
-        <div class="modal-dialog vertical-align-center">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Cancelar</span>
-                    </button>
-                     <h4 class="modal-title" id="myModalLabel" style="font-weight:1000;font-size:3rem;">Editar</h4>
-                </div>
-                <div class="modal-body">
-          {!! Form::open( array('route'=>['admin.panelWebController.edit',$reg->id_noticia],'method'=>'GET')) !!}
-					<input type="hidden" name="id_noticia" id="idEditar" value="">
-					<input type="text" name="tituloeditar" id="tituloeditar" value=""  style="border: none;border-bottom: .3px solid #a8a8a8; width: 100%; outline: none; height: 50px; font-size: 2rem;" placeholder="">
-					<input type="text" name="descripcioneditar" id="descripcioneditar" value=""  style="border: none;border-bottom: .3px solid #a8a8a8; width: 100%; outline: none; height: 50px; font-size: 2rem;" placeholder="">
-					<textarea name="noticiaeditar" id="noticiaeditar" value=""  style="font-family: Raleway;font-size: 2rem;width:100%;height:50vh; resize: none;" placeholder=""></textarea>
-
-					<input id="uploadFile" name="uploadFile" placeholder="Archivo Elegido" disabled="disabled" />
-					<div class="fileUpload btn btn-primary">
-					    <span>Subir Archivo</span>
-					    <input id="uploadBtn" name="uploadBtn" type="file" class="upload" />
-					</div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Editar</button>
-                </div>
-
-								{{Form::close()}}
-
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="Agregar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-
-			{{Form::open( array('url'=>'/admin/','files'=>true)) }}
-    <div class="vertical-alignment-helper">
-        <div class="modal-dialog vertical-align-center">
-						<div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Cancelar</span>
-                    </button>
-                     <h4 class="modal-title" id="myModalLabel">Agregar</h4>
-                </div>
-                <div class="modal-body">
-										{{Form::text('Titulo','',array('style'=>'border: none;border-bottom: .3px solid #a8a8a8; width: 100%; outline: none; height: 50px; font-size: 2rem;','placeholder'=>'Titulo de la noticia'))}}
-										{{Form::text('Descripcion','',array('style'=>'border: none;border-bottom: .3px solid #a8a8a8; width: 100%; outline: none; height: 50px; font-size: 2rem;','placeholder'=>'Descripcion de noticia'))}}
-										{{Form::textarea('Noticia','',array('style'=>'font-family: Raleway;font-size: 12pt;width:100%;height:50vh; resize: none;','placeholder'=>'Noticia'))}}
-
-					<input id="uploadFile" placeholder="Archivo Elegido" disabled="disabled" />
-					<div class="fileUpload btn btn-primary">
-					    <span>Subir Archivo</span>
-					    <input id="uploadBtn" type="file" class="upload" name="Imagen" />
-					</div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-										{{Form::submit('Agregar',array('class'=>'btn btn-primary'))}}
-                </div>
-            </div>
-						{{Form::close()}}
-        </div>
-    </div>
-</div>
 
 <!-- Boton de subir archivos -->
 <script>
